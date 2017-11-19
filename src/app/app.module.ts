@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './history/history.component';
 import { SensorCComponent } from './sensorC/sensorC.component';
 import { SensorMComponent } from './sensorM/sensorM.component';
+import { SensorTComponent } from './sensorT/sensorT.component';
+import { SensorLComponent } from './sensorL/sensorL.component';
 import { StateSensorComponent } from './state-sensor/state-sensor.component';
 import { StateComponent } from './state/state.component';
 import { RoomComponent } from './room/room.component';
@@ -38,6 +40,8 @@ import { AppRoutingModule } from './app-routing.module';
     HistoryComponent,
     SensorCComponent,
     SensorMComponent,
+    SensorTComponent,
+    SensorLComponent,
     StateSensorComponent,
     StateComponent,
     RoomComponent,
