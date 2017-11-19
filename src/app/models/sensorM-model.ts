@@ -1,8 +1,8 @@
 export class SensorMModel {
   constructor (
+    public id: number,
     public ubicacionE: string,
     public ubicacionC: string,
-    public id: number,
     public descripcion: string,
     public tipoSensor: string,
     public estado: boolean,
