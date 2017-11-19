@@ -214,128 +214,24 @@
           <h4 class="list-group-header">
             Cuartos
           </h4>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 62.4%;"></span>
-            <span class="pull-right text-muted">62.4%</span>
-            Sala de Conferencias
+          <a *ngFor="let room of rooms" class="list-group-item">
+            <span class="pull-right text-muted">{{room.maxconsumoEnergia}}</span>
+            {{room.nombre}}
           </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 15.0%;"></span>
-            <span class="pull-right text-muted">15.0%</span>
-            Cafetería
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 5.0%;"></span>
-            <span class="pull-right text-muted">5.0%</span>
-            Área de trabajo
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 5.0%;"></span>
-            <span class="pull-right text-muted">5.0%</span>
-            Baños
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 4.5%;"></span>
-            <span class="pull-right text-muted">4.5%</span>
-            Recepción
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 2.3%;"></span>
-            <span class="pull-right text-muted">2.3%</span>
-            Área común
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 1.7%;"></span>
-            <span class="pull-right text-muted">1.7%</span>
-            Sala de Espera
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 1.5%;"></span>
-            <span class="pull-right text-muted">1.5%</span>
-            Entrada
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 1.4%;"></span>
-            <span class="pull-right text-muted">1.4%</span>
-            Escaleras
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="list-group-progress" style="width: 1.2%;"></span>
-            <span class="pull-right text-muted">1.2%</span>
-            Estacionamiento
-          </a>
-
         </div>
-        <a href="#" class="btn btn-primary-outline">Todos los cuartos</a>
       </div>
+
       <div class="col-md-4 m-b-md">
         <div class="list-group">
           <h4 class="list-group-header">
             Dispositivos más utilizados
           </h4>
 
-          <a class="list-group-item" href="#">
+          <a *ngFor="" class="list-group-item" href="#">
             <span class="pull-right text-muted">3,929,481</span>
             Foco de escritorio 2
           </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">1,143,393</span>
-            Enchufe escritorio 5
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">938,287</span>
-            Aire acondicionado 2º piso
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">749,393</span>
-            Calefacción recepeción
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">695,912</span>
-            Sensor movimiento escalera
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">501,938</span>
-            Foco escaleras
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">392,842</span>
-            Sensor movimiento estacionamiento
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">298,183</span>
-            Focos estacionamiento
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">193,129</span>
-            Calefacción sala de conferencias
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">93,382</span>
-            Enchufe microondas 1
-          </a>
-
         </div>
-        <a href="#" class="btn btn-primary-outline">Ver todos los dispositivos</a>
       </div>
       <div class="col-md-4 m-b-md">
         <div class="list-group">
