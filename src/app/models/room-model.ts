@@ -1,12 +1,14 @@
 export class RoomModel {
-  id: number;
-  nombre: string;
-  maxVelocidad: number;
-  minVelocidad: number;
-  ubicacionE: string;
-  ubicacionC: string;
-  maxconsumoEnergia: number;
-  minconsumoEnergia: number;
-  maxtemperatura: number;
-  mintemperatura: number;
+  constructor(
+    public id: number,
+    public nombre: string,
+    public maxVelocidad: number,
+    public minVelocidad: number,
+    public ubicacionE: string,
+    public ubicacionC: string,
+    public maxconsumoEnergia: number,
+    public minconsumoEnergia: number,
+    public maxtemperatura: number,
+    public mintemperatura: number
+  ) { }
 }

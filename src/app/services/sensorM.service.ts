@@ -14,14 +14,33 @@ export class SensorMService {
   }
 
   getSensorsM(): Promise<SensorMModel[]> {
-    const apiURL = `${this.apiRoot}`;
-    return this.http.get(apiURL)
-      .toPromise()
-      .then(
-        res =>  // Success
-          res.json().sensorsM as SensorMModel[]
-      ).catch(this.handleError);
-
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = `${this.apiRoot}`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            this.sensorsM = res.json().map((item: any) => {
+              return new SensorMModel(
+                item.ubicacionE,
+                item.ubicacionC,
+                item.id,
+                item.descripcion,
+                item.tipoSensor,
+                item.estado,
+                item.conectado,
+                item.movimiento,
+                item.nombre
+              );
+            });
+            resolve(this.sensorsM);
+          },
+          msg => {
+            reject(msg);
+          }
+        );
+    });
+    return promise;
   }
 
   private handleError(error: any): Promise<any> {

@@ -14,13 +14,35 @@ export class ActuatorCService {
   }
 
   getActuatorsC(): Promise<ActuatorCModel[]> {
-    const apiURL = `${this.apiRoot}`;
-    return this.http.get(apiURL)
-      .toPromise()
-      .then(
-        res =>  // Success
-          res.json().actuatorsC as ActuatorCModel[]
-      ).catch(this.handleError);
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = `${this.apiRoot}`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            this.actuatorsC = res.json().map((item: any) => {
+              return new ActuatorCModel(
+                item.nombre,
+                item.id,
+                item.unidad,
+                item.ubicacionE,
+                item.ubicacionC,
+                item.consumoEnergia,
+                item.descripcion,
+                item.tipoActuador,
+                item.estado,
+                item.conectado,
+                item.temperatura
+              );
+            });
+            resolve(this.actuatorsC);
+          },
+          msg => {
+            reject(msg);
+          }
+        );
+    });
+    return promise;
 
   }
 

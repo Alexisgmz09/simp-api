@@ -14,13 +14,34 @@ export class RoomService {
   }
 
   getRooms(): Promise<RoomModel[]> {
-    const apiURL = `${this.apiRoot}`;
-    return this.http.get(apiURL)
-      .toPromise()
-      .then(
-        res =>  // Success
-          res.json().rooms as RoomModel[]
-      ).catch(this.handleError);
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = `${this.apiRoot}`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            this.rooms = res.json().map((item: any) => {
+              return new RoomModel(
+                item.id,
+                item.nombre,
+                item.maxVelocidad,
+                item.minVelocidad,
+                item.ubicacionE,
+                item.ubicacionC,
+                item.maxconsumoEnergia,
+                item.minconsumoEnergia,
+                item.maxtemperatura,
+                item.mintemperatura
+              );
+            });
+            resolve(this.rooms);
+          },
+          msg => {
+            reject(msg);
+          }
+        );
+    });
+    return promise;
 
   }
 

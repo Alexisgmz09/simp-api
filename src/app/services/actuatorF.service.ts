@@ -14,13 +14,35 @@ export class ActuatorFService {
   }
 
   getActuatorsF(): Promise<ActuatorFModel[]> {
-    const apiURL = `${this.apiRoot}`;
-    return this.http.get(apiURL)
-      .toPromise()
-      .then(
-        res =>  // Success
-          res.json().actuatorsF as ActuatorFModel[]
-      ).catch(this.handleError);
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = `${this.apiRoot}`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            this.actuatorsF = res.json().map((item: any) => {
+              return new ActuatorFModel(
+                item.nombre,
+                item.id,
+                item.unidad,
+                item.ubicacionE,
+                item.ubicacionC,
+                item.consumoEnergia,
+                item.descripcion,
+                item.tipoActuador,
+                item.estado,
+                item.conectado,
+                item.intensidad
+              );
+            });
+            resolve(this.actuatorsF);
+          },
+          msg => {
+            reject(msg);
+          }
+        );
+    });
+    return promise;
 
   }
 

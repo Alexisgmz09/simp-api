@@ -14,13 +14,36 @@ export class ActuatorAService {
   }
 
   getActuatorsA(): Promise<ActuatorAModel[]> {
-    const apiURL = `${this.apiRoot}`;
-    return this.http.get(apiURL)
-      .toPromise()
-      .then(
-        res =>  // Success
-          res.json().actuatorsA as ActuatorAModel[]
-      ).catch(this.handleError);
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = `${this.apiRoot}`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            this.actuatorsA = res.json().map((item: any) => {
+              return new ActuatorAModel(
+                item.nombre,
+                item.id,
+                item.velocidad,
+                item.unidad,
+                item.ubicacionE,
+                item.ubicacionC,
+                item.consumoEnergia,
+                item.descripcion,
+                item.tipoActuador,
+                item.estado,
+                item.conectado,
+                item.temperatura
+              );
+            });
+            resolve(this.actuatorsA);
+          },
+          msg => {
+            reject(msg);
+          }
+        );
+    });
+    return promise;
 
   }
 

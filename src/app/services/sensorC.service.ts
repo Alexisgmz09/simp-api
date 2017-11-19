@@ -14,14 +14,34 @@ export class SensorCService {
   }
 
   getSensorsC(): Promise<SensorCModel[]> {
-    const apiURL = `${this.apiRoot}`;
-    return this.http.get(apiURL)
-      .toPromise()
-      .then(
-        res =>  // Success
-          res.json().sensorsC as SensorCModel[]
-      ).catch(this.handleError);
-
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = `${this.apiRoot}`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            this.sensorsC = res.json().map((item: any) => {
+              return new SensorCModel(
+                item.ubicacionE,
+                item.ubicacionC,
+                item.id,
+                item.descripcion,
+                item.tipoSensor,
+                item.estado,
+                item.conectado,
+                item.consume,
+                item.energia,
+                item.nombre
+              );
+            });
+            resolve(this.sensorsC);
+          },
+          msg => {
+            reject(msg);
+          }
+        );
+    });
+    return promise;
   }
 
   private handleError(error: any): Promise<any> {
