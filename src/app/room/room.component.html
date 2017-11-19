@@ -13,17 +13,49 @@
           <h4 class="list-group-header">
             Habitación
           </h4>
-          <div class="list-group-item">
-            Nombre:<br>
-            <div class="input">
-              <input type="text" value="" class="form-control">
-            </div><br>
-            Edificio:<br>
-            <div class="input">
-              <input type="text" value="" class="form-control">
-            </div><br>
-            <a href="#" class="btn btn-success-outline">Crear habitación</a>
-          </div>
+
+            <form>
+              <div class="list-group-item">
+                Nombre:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="name" name="name">
+                </div><br>
+                Edificio:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="building" name="building">
+                </div><br>
+                Salón:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="loc" name="loc">
+                </div><br>
+                Consumo mínimo energía:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="minene" name="minene">
+                </div><br>
+                Consumo máximo energía:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="maxene" name="maxene">
+                </div><br>
+                Temperatura mínima:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="mintem" name="mintem">
+                </div><br>
+                Temperatura máxima:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="maxtem" name="maxtem">
+                </div><br>
+                Velocidad mínima:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="minvel" name="minvel">
+                </div><br>
+                Velocidad Máxima:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="maxvel" name="maxvel">
+                </div><br>
+                <button on-click="postRoom()" class="btn btn-success-outline">Crear habitación</button>
+              </div>
+            </form>
+
         </div>
       </div>
     </div>
