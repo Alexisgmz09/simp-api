@@ -10,10 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './history/history.component';
 import { SensorCComponent } from './sensorC/sensorC.component';
+import { SensorMComponent } from './sensorM/sensorM.component';
 import { StateSensorComponent } from './state-sensor/state-sensor.component';
 import { StateComponent } from './state/state.component';
 import { RoomComponent } from './room/room.component';
 import { ActuatorAComponent } from './actuatorA/actuatorA.component';
+import { ActuatorCComponent } from './actuatorC/actuatorC.component';
+import { ActuatorFComponent } from './actuatorF/actuatorF.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 // Services
@@ -34,10 +37,13 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     HistoryComponent,
     SensorCComponent,
+    SensorMComponent,
     StateSensorComponent,
     StateComponent,
     RoomComponent,
     ActuatorAComponent,
+    ActuatorCComponent,
+    ActuatorFComponent,
     SidebarComponent
   ],
   imports: [
