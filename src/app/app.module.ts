@@ -9,11 +9,11 @@ import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './history/history.component';
-import { SensorComponent } from './sensor/sensor.component';
+import { SensorCComponent } from './sensorC/sensorC.component';
 import { StateSensorComponent } from './state-sensor/state-sensor.component';
 import { StateComponent } from './state/state.component';
 import { RoomComponent } from './room/room.component';
-import { ActuatorComponent } from './actuator/actuator.component';
+import { ActuatorAComponent } from './actuatorA/actuatorA.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 // Services
@@ -33,11 +33,11 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     HomeComponent,
     HistoryComponent,
-    SensorComponent,
+    SensorCComponent,
     StateSensorComponent,
     StateComponent,
     RoomComponent,
-    ActuatorComponent,
+    ActuatorAComponent,
     SidebarComponent
   ],
   imports: [
