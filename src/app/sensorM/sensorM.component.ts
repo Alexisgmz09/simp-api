@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SensorMModel} from "../models/sensorM-model";
+import { SensorMModel } from '../models/sensorM-model';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 
