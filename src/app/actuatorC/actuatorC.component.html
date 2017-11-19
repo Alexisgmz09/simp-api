@@ -19,10 +19,6 @@
               <div class="input">
                 <input type="text" value="" name="name" [(ngModel)]="name" class="form-control">
               </div><br>
-              Velocidad:<br>
-              <div class="input">
-                <input type="text" value="" name="speed" [(ngModel)]="speed" class="form-control">
-              </div><br>
               Unidad:<br>
               <div class="input">
                 <input type="text" value="" name="unit" [(ngModel)]="unit" class="form-control">
@@ -41,28 +37,28 @@
               </div><br>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radioConec" name="radioConec" [(ngModel)]="radioConec">
+                  <input type="radio" value="true" id="radioConec" name="radioConec" [(ngModel)]="radioConec">
                   <span class="custom-control-indicator"></span>
                   Conectado
                 </label>
               </div>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radioDisc" name="radioConec" [(ngModel)]="radioConec">
+                  <input type="radio" value="false" id="radioDisc" name="radioConec" [(ngModel)]="radioConec">
                   <span class="custom-control-indicator"></span>
                   Desconectado
                 </label>
               </div><br><br>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radioAct" name="radioAct" [(ngModel)]="radioAct">
+                  <input type="radio" value="true" id="radioAct" name="radioAct" [(ngModel)]="radioAct">
                   <span class="custom-control-indicator"></span>
                   Activado
                 </label>
               </div>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radioDis" name="radioAct" [(ngModel)]="radioAct">
+                  <input type="radio" value="false" id="radioDis" name="radioAct" [(ngModel)]="radioAct">
                   <span class="custom-control-indicator"></span>
                   Desactivado
                 </label>

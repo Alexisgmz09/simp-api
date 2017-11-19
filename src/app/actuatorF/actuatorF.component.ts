@@ -21,7 +21,7 @@ export class ActuatorFComponent implements OnInit {
 
   ngOnInit() {
   }
-  postActuadorA(): Promise<Response> {
+  postActuadorF(): Promise<Response> {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
