@@ -1,131 +1,107 @@
-<app-sidebar></app-sidebar>
-<div class="container">
-  <div class="dashhead">
-    <div class="dashhead-titles">
-      <h6 class="dashhead-subtitle">Save Me Money Please</h6>
-      <h2 class="dashhead-title">Sensores/ Actuadores</h2>
+  <div class="with-iconav">
+  <app-sidebar></app-sidebar>
+  <div class="container">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+        <h2 class="dashhead-title">Sensores/ Actuadores</h2>
+      </div>
+
     </div>
 
-    <div class="btn-toolbar dashhead-toolbar">
-      <div class="btn-toolbar-item input-with-icon">
-        <input type="text" value="01/01/15 - 01/08/15" class="form-control" data-provide="datepicker">
-        <span class="icon icon-calendar"></span>
+
+    <div class="table-full">
+      <div class="table-responsive">
+        <table class="table" data-sort="table">
+          <thead>
+          <tr>
+            <th># Dispositivo</th>
+            <th>Nombre Dispositivo</th>
+            <th>Habitación</th>
+            <th>Estatus</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr *ngFor="let actuatorA of actuatorsA">
+            <td>{{actuatorA.id}}</td>
+            <td>{{actuatorA.nombre}}</td>
+            <td>{{ actuatorA.ubicacionC }}</td>
+            <td>{{ actuatorA.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button type="button" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+
+          <tr *ngFor="let actuatorC of actuatorsC">
+            <td>{{actuatorC.id}}</td>
+            <td>{{actuatorC.nombre}}</td>
+            <td>{{ actuatorC.ubicacionC }}</td>
+            <td>{{ actuatorC.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button type="button" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+
+          <tr *ngFor="let actuatorF of actuatorsF">
+            <td>{{actuatorF.id}}</td>
+            <td>{{actuatorF.nombre}}</td>
+            <td>{{ actuatorF.ubicacionC }}</td>
+            <td>{{ actuatorF.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button type="button" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+
+          <tr *ngFor="let sensorC of sensorsC">
+            <td>{{sensorC.id}}</td>
+            <td>{{sensorC.nombre}}</td>
+            <td>{{ sensorC.ubicacionC }}</td>
+            <td>{{ sensorC.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button type="button" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+
+          <tr *ngFor="let sensorM of sensorsM">
+            <td>{{sensorM.id}}</td>
+            <td>{{sensorM.nombre}}</td>
+            <td>{{ sensorM.ubicacionC }}</td>
+            <td>{{ sensorM.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button type="button" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+
+          </tbody>
+        </table>
       </div>
     </div>
+
   </div>
-
-
-  <div class="table-full">
-    <div class="table-responsive">
-      <table class="table" data-sort="table">
-        <thead>
-        <tr>
-          <th># Dispositivo</th>
-          <th>Nombre Dispositivo</th>
-          <th>Habitación</th>
-          <th>Estatus</th>
-        </tr>
-        </thead>
-        <tbody>
-
-        <tr *ngFor="let actuatorA of actuatorsA">
-          <td>{{actuatorA.id}}</td>
-          <td>{{actuatorA.nombre}}</td>
-          <td>{{ actuatorA.ubicacionC }}</td>
-          <td>{{ actuatorA.estado }}</td>
-          <td>  <div class="btn-group">
-            <button type="button" class="btn btn-primary-outline">
-              <span class="icon icon-pencil"></span>
-            </button>
-            <button type="button" class="btn btn-danger-outline">
-              <span class="icon icon-erase"></span>
-            </button>
-          </div></td>
-        </tr>
-
-        <tr *ngFor="let actuatorC of actuatorsC">
-          <td>{{actuatorC.id}}</td>
-          <td>{{actuatorC.nombre}}</td>
-          <td>{{ actuatorC.ubicacionC }}</td>
-          <td>{{ actuatorC.estado }}</td>
-          <td>  <div class="btn-group">
-            <button type="button" class="btn btn-primary-outline">
-              <span class="icon icon-pencil"></span>
-            </button>
-            <button type="button" class="btn btn-danger-outline">
-              <span class="icon icon-erase"></span>
-            </button>
-          </div></td>
-        </tr>
-
-        <tr *ngFor="let actuatorF of actuatorsF">
-          <td>{{actuatorF.id}}</td>
-          <td>{{actuatorF.nombre}}</td>
-          <td>{{ actuatorF.ubicacionC }}</td>
-          <td>{{ actuatorF.estado }}</td>
-          <td>  <div class="btn-group">
-            <button type="button" class="btn btn-primary-outline">
-              <span class="icon icon-pencil"></span>
-            </button>
-            <button type="button" class="btn btn-danger-outline">
-              <span class="icon icon-erase"></span>
-            </button>
-          </div></td>
-        </tr>
-
-        <tr *ngFor="let sensorC of sensorsC">
-          <td>{{sensorC.id}}</td>
-          <td>{{sensorC.nombre}}</td>
-          <td>{{ sensorC.ubicacionC }}</td>
-          <td>{{ sensorC.estado }}</td>
-          <td>  <div class="btn-group">
-            <button type="button" class="btn btn-primary-outline">
-              <span class="icon icon-pencil"></span>
-            </button>
-            <button type="button" class="btn btn-danger-outline">
-              <span class="icon icon-erase"></span>
-            </button>
-          </div></td>
-        </tr>
-
-        <tr *ngFor="let sensorM of sensorsM">
-          <td>{{sensorM.id}}</td>
-          <td>{{sensorM.nombre}}</td>
-          <td>{{ sensorM.ubicacionC }}</td>
-          <td>{{ sensorM.estado }}</td>
-          <td>  <div class="btn-group">
-            <button type="button" class="btn btn-primary-outline">
-              <span class="icon icon-pencil"></span>
-            </button>
-            <button type="button" class="btn btn-danger-outline">
-              <span class="icon icon-erase"></span>
-            </button>
-          </div></td>
-        </tr>
-
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="text-center">
-    <ul class="pagination">
-      <li>
-        <a href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li>
-        <a href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
 </div>

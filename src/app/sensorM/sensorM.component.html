@@ -1,68 +1,70 @@
-<app-sidebar></app-sidebar>
-<div class="container">
-  <div class="dashhead">
-    <div class="dashhead-titles">
-      <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+  <div class="with-iconav">
+  <app-sidebar></app-sidebar>
+  <div class="container">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+      </div>
     </div>
-  </div>
 
-  <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
-    <div class="row">
-      <div class="col-sm-4 col-lg-4">
-        <div class="list-group">
-          <h4 class="list-group-header">
-            Sensor
-          </h4>
-          <div class="list-group-item">
-            Nombre:<br>
-            <div class="input">
-              <input type="text" name="name" [(ngModel)]="name" class="form-control">
-            </div><br>
-            Edificio:<br>
-            <div class="input">
-              <input type="text" name="building" [(ngModel)]="building" class="form-control">
-            </div><br>
-            Cuarto:<br>
-            <div class="input">
-              <input type="text" name="room" [(ngModel)]="room" class="form-control">
-            </div><br>
-            Descripción:<br>
-            <div class="input">
-              <input type="text" name="desc" [(ngModel)]="desc" class="form-control">
-            </div><br>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioConec" value="true" [(ngModel)]="radioConec" name="radioConec">
-                <span class="custom-control-indicator"></span>
-                Conectado
-              </label>
+    <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
+      <div class="row">
+        <div class="col-sm-4 col-lg-4">
+          <div class="list-group">
+            <h4 class="list-group-header">
+              Sensor
+            </h4>
+            <div class="list-group-item">
+              Nombre:<br>
+              <div class="input">
+                <input type="text" name="name" [(ngModel)]="name" class="form-control">
+              </div><br>
+              Edificio:<br>
+              <div class="input">
+                <input type="text" name="building" [(ngModel)]="building" class="form-control">
+              </div><br>
+              Cuarto:<br>
+              <div class="input">
+                <input type="text" name="room" [(ngModel)]="room" class="form-control">
+              </div><br>
+              Descripción:<br>
+              <div class="input">
+                <input type="text" name="desc" [(ngModel)]="desc" class="form-control">
+              </div><br>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioConec" value="true" [(ngModel)]="radioConec" name="radioConec">
+                  <span class="custom-control-indicator"></span>
+                  Conectado
+                </label>
+              </div>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioDisco" value="false" [(ngModel)]="radioConec" name="radioConec">
+                  <span class="custom-control-indicator"></span>
+                  Desconectado
+                </label>
+              </div><br><br>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioAct" [(ngModel)]="radioAct" name="radioAct">
+                  <span class="custom-control-indicator"></span>
+                  Activado
+                </label>
+              </div>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioDisac" [(ngModel)]="radioAct" name="radioAct">
+                  <span class="custom-control-indicator"></span>
+                  Desactivado
+                </label>
+              </div><br><br>
+              <button on-click="postSensorM()" class="btn btn-success-outline">Crear sensor</button>
             </div>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioDisco" value="false" [(ngModel)]="radioConec" name="radioConec">
-                <span class="custom-control-indicator"></span>
-                Desconectado
-              </label>
-            </div><br><br>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioAct" [(ngModel)]="radioAct" name="radioAct">
-                <span class="custom-control-indicator"></span>
-                Activado
-              </label>
-            </div>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioDisac" [(ngModel)]="radioAct" name="radioAct">
-                <span class="custom-control-indicator"></span>
-                Desactivado
-              </label>
-            </div><br><br>
-            <button on-click="postSensorM()" class="btn btn-success-outline">Crear sensor</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

@@ -1,64 +1,66 @@
-<app-sidebar></app-sidebar>
-<div class="container">
-  <div class="dashhead">
-    <div class="dashhead-titles">
-      <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+  <div class="with-iconav">
+  <app-sidebar></app-sidebar>
+  <div class="container">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+      </div>
     </div>
-  </div>
 
-  <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
-    <div class="row">
-      <div class="col-sm-4 col-lg-4">
-        <div class="list-group">
-          <h4 class="list-group-header">
-            Habitación
-          </h4>
+    <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
+      <div class="row">
+        <div class="col-sm-4 col-lg-4">
+          <div class="list-group">
+            <h4 class="list-group-header">
+              Habitación
+            </h4>
 
-            <form>
-              <div class="list-group-item">
-                Nombre:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="name" name="name">
-                </div><br>
-                Edificio:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="building" name="building">
-                </div><br>
-                Salón:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="loc" name="loc">
-                </div><br>
-                Consumo mínimo energía:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="minene" name="minene">
-                </div><br>
-                Consumo máximo energía:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="maxene" name="maxene">
-                </div><br>
-                Temperatura mínima:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="mintem" name="mintem">
-                </div><br>
-                Temperatura máxima:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="maxtem" name="maxtem">
-                </div><br>
-                Velocidad mínima:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="minvel" name="minvel">
-                </div><br>
-                Velocidad Máxima:<br>
-                <div class="input">
-                  <input type="text" value="" class="form-control" [(ngModel)]="maxvel" name="maxvel">
-                </div><br>
-                <button on-click="postRoom()" class="btn btn-success-outline">Crear habitación</button>
-              </div>
-            </form>
+              <form>
+                <div class="list-group-item">
+                  Nombre:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="name" name="name">
+                  </div><br>
+                  Edificio:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="building" name="building">
+                  </div><br>
+                  Salón:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="loc" name="loc">
+                  </div><br>
+                  Consumo mínimo energía:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="minene" name="minene">
+                  </div><br>
+                  Consumo máximo energía:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="maxene" name="maxene">
+                  </div><br>
+                  Temperatura mínima:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="mintem" name="mintem">
+                  </div><br>
+                  Temperatura máxima:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="maxtem" name="maxtem">
+                  </div><br>
+                  Velocidad mínima:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="minvel" name="minvel">
+                  </div><br>
+                  Velocidad Máxima:<br>
+                  <div class="input">
+                    <input type="text" value="" class="form-control" [(ngModel)]="maxvel" name="maxvel">
+                  </div><br>
+                  <button on-click="postRoom()" class="btn btn-success-outline">Crear habitación</button>
+                </div>
+              </form>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

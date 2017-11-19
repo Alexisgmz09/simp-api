@@ -1,77 +1,79 @@
-<app-sidebar></app-sidebar>
-<div class="container">
-  <div class="dashhead">
-    <div class="dashhead-titles">
-      <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+<div class="with-iconav">
+  <app-sidebar></app-sidebar>
+  <div class="container">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+      </div>
     </div>
-  </div>
 
-  <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
-    <div class="row">
-      <div class="col-sm-4 col-lg-4">
-        <div class="list-group">
-          <h4 class="list-group-header">
-            Actuador
-          </h4>
-          <div class="list-group-item">
-            Nombre:<br>
-            <div class="input">
-              <input type="text" value="" name="name" [(ngModel)]="name" class="form-control">
-            </div><br>
-            Velocidad:<br>
-            <div class="input">
-              <input type="text" value="" name="speed" [(ngModel)]="speed" class="form-control">
-            </div><br>
-            Unidad:<br>
-            <div class="input">
-              <input type="text" value="" name="unit" [(ngModel)]="unit" class="form-control">
-            </div><br>
-            Edificio:<br>
-            <div class="input">
-              <input type="text" value="" name="building" [(ngModel)]="building" class="form-control">
-            </div><br>
-            Cuarto:<br>
-            <div class="input">
-              <input type="text" value="" name="room" [(ngModel)]="room" class="form-control">
-            </div><br>
-            Descripción:<br>
-            <div class="input">
-              <input type="text" value="" name="desc" [(ngModel)]="desc" class="form-control">
-            </div><br>
+    <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
+      <div class="row">
+        <div class="col-sm-4 col-lg-4">
+          <div class="list-group">
+            <h4 class="list-group-header">
+              Actuador
+            </h4>
+            <div class="list-group-item">
+              Nombre:<br>
+              <div class="input">
+                <input type="text" value="" name="name" [(ngModel)]="name" class="form-control">
+              </div><br>
+              Velocidad:<br>
+              <div class="input">
+                <input type="text" value="" name="speed" [(ngModel)]="speed" class="form-control">
+              </div><br>
+              Unidad:<br>
+              <div class="input">
+                <input type="text" value="" name="unit" [(ngModel)]="unit" class="form-control">
+              </div><br>
+              Edificio:<br>
+              <div class="input">
+                <input type="text" value="" name="building" [(ngModel)]="building" class="form-control">
+              </div><br>
+              Cuarto:<br>
+              <div class="input">
+                <input type="text" value="" name="room" [(ngModel)]="room" class="form-control">
+              </div><br>
+              Descripción:<br>
+              <div class="input">
+                <input type="text" value="" name="desc" [(ngModel)]="desc" class="form-control">
+              </div><br>
 
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioConec" value="true" name="radioConec" [(ngModel)]="radioConec">
-                <span class="custom-control-indicator"></span>
-                Conectado
-              </label>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioConec" value="true" name="radioConec" [(ngModel)]="radioConec">
+                  <span class="custom-control-indicator"></span>
+                  Conectado
+                </label>
+              </div>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioDisconec" value="false" name="radioConec" [(ngModel)]="radioConec">
+                  <span class="custom-control-indicator"></span>
+                  Desconectado
+                </label>
+              </div><br><br>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioAct" name="radioAct" [(ngModel)]="radioAct">
+                  <span class="custom-control-indicator"></span>
+                  Activado
+                </label>
+              </div>
+              <div class="radio-inline custom-control custom-radio">
+                <label>
+                  <input type="radio" id="radioInac" name="radioAct"[(ngModel)]="radioAct">
+                  <span class="custom-control-indicator"></span>
+                  Desactivado
+                </label>
+              </div><br><br>
+              <button on-click="postActuadorA()" class="btn btn-success-outline">Crear actuador</button>
             </div>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioDisconec" value="false" name="radioConec" [(ngModel)]="radioConec">
-                <span class="custom-control-indicator"></span>
-                Desconectado
-              </label>
-            </div><br><br>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioAct" name="radioAct" [(ngModel)]="radioAct">
-                <span class="custom-control-indicator"></span>
-                Activado
-              </label>
-            </div>
-            <div class="radio-inline custom-control custom-radio">
-              <label>
-                <input type="radio" id="radioInac" name="radioAct"[(ngModel)]="radioAct">
-                <span class="custom-control-indicator"></span>
-                Desactivado
-              </label>
-            </div><br><br>
-            <button on-click="postActuadorA()" class="btn btn-success-outline">Crear actuador</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

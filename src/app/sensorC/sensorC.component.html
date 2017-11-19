@@ -1,74 +1,76 @@
-<app-sidebar></app-sidebar>
-<div class="container">
-  <div class="dashhead">
-    <div class="dashhead-titles">
-      <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+  <div class="with-iconav">
+  <app-sidebar></app-sidebar>
+  <div class="container">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Save Me Money Please</h6>
+      </div>
     </div>
-  </div>
 
-  <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
-    <div class="row">
-      <div class="col-sm-4 col-lg-4">
-        <div class="list-group">
-          <h4 class="list-group-header">
-            Sensor
-          </h4>
-          <form>
-            <div class="list-group-item">
-              Nombre:<br>
-              <div class="input">
-                <input type="text" value="" class="form-control" [(ngModel)]="name" name="name">
-              </div><br>
-              Edificio:<br>
-              <div class="input">
-                <input type="text" value="" class="form-control" [(ngModel)]="building" name="building">
-              </div><br>
-              Cuarto:<br>
-              <div class="input">
-                <input type="text" value="" class="form-control" [(ngModel)]="room" name="room">
-              </div><br>
-              Descripción:<br>
-              <div class="input">
-                <input type="text" value="" class="form-control" [(ngModel)]="desc" name="desc">
-              </div><br>
-              <div class="radio-inline custom-control custom-radio">
-                <label>
-                  <input type="radio" id="radioConec" name="radioConec" [(ngModel)]="radioConec" value="true">
-                  <span class="custom-control-indicator"></span>
-                  Conectado
-                </label>
+    <div class="col-sm-12 col-sm-offset-4 col-lg-12  col-lg-offset-4">
+      <div class="row">
+        <div class="col-sm-4 col-lg-4">
+          <div class="list-group">
+            <h4 class="list-group-header">
+              Sensor
+            </h4>
+            <form>
+              <div class="list-group-item">
+                Nombre:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="name" name="name">
+                </div><br>
+                Edificio:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="building" name="building">
+                </div><br>
+                Cuarto:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="room" name="room">
+                </div><br>
+                Descripción:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control" [(ngModel)]="desc" name="desc">
+                </div><br>
+                <div class="radio-inline custom-control custom-radio">
+                  <label>
+                    <input type="radio" id="radioConec" name="radioConec" [(ngModel)]="radioConec" value="true">
+                    <span class="custom-control-indicator"></span>
+                    Conectado
+                  </label>
+                </div>
+                <div class="radio-inline custom-control custom-radio">
+                  <label>
+                    <input type="radio" id="radioDesc" name="radioConec" [(ngModel)]="radioConec" value="false">
+                    <span class="custom-control-indicator"></span>
+                    Desconectado
+                  </label>
+                </div><br><br>
+                Tipo de sensor:<br>
+                <div class="input">
+                  <input type="text" value="" class="form-control">
+                </div><br>
+                <div class="radio-inline custom-control custom-radio">
+                  <label>
+                    <input type="radio" id="radioAct" name="radioAct" [(ngModel)]="radioAct" value="true">
+                    <span class="custom-control-indicator"></span>
+                    Activado
+                  </label>
+                </div>
+                <div class="radio-inline custom-control custom-radio">
+                  <label>
+                    <input type="radio" id="radioInac" name="radioAct" [(ngModel)]="radioAct" value="false">
+                    <span class="custom-control-indicator"></span>
+                    Desactivado
+                  </label>
+                </div><br><br>
+                <button on-click="postSensorC()" class="btn btn-success-outline">Crear sensor</button>
               </div>
-              <div class="radio-inline custom-control custom-radio">
-                <label>
-                  <input type="radio" id="radioDesc" name="radioConec" [(ngModel)]="radioConec" value="false">
-                  <span class="custom-control-indicator"></span>
-                  Desconectado
-                </label>
-              </div><br><br>
-              Tipo de sensor:<br>
-              <div class="input">
-                <input type="text" value="" class="form-control">
-              </div><br>
-              <div class="radio-inline custom-control custom-radio">
-                <label>
-                  <input type="radio" id="radioAct" name="radioAct" [(ngModel)]="radioAct" value="true">
-                  <span class="custom-control-indicator"></span>
-                  Activado
-                </label>
-              </div>
-              <div class="radio-inline custom-control custom-radio">
-                <label>
-                  <input type="radio" id="radioInac" name="radioAct" [(ngModel)]="radioAct" value="false">
-                  <span class="custom-control-indicator"></span>
-                  Desactivado
-                </label>
-              </div><br><br>
-              <button on-click="postSensorC()" class="btn btn-success-outline">Crear sensor</button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

@@ -7,28 +7,15 @@
         <h6 class="dashhead-subtitle">Save Me Money Please</h6>
         <h3 class="dashhead-title">Menu</h3>
       </div>
-
-      <div class="dashhead-toolbar">
-        <div class="input-with-icon dashhead-toolbar-item">
-          <input type="text" value="01/01/15 - 01/08/15" class="form-control" data-provide="datepicker">
-          <span class="icon icon-calendar"></span>
-        </div>
-        <span class="dashhead-toolbar-divider hidden-xs"></span>
-        <div class="btn-group dashhead-toolbar-item btn-group-thirds">
-          <button type="button" class="btn btn-primary-outline">Día</button>
-          <button type="button" class="btn btn-primary-outline active">Mes</button>
-          <button type="button" class="btn btn-primary-outline">Año</button>
-        </div>
-      </div>
     </div>
 
     <ul class="nav nav-bordered m-t m-b-0" role="tablist">
       <li class="active" role="presentation">
         <a href="#sensors" role="tab" data-toggle="tab" aria-controls="traffic">Sensores</a>
       </li>
-      <li role="presentation">
+      <!--<li role="presentation">
         <a href="#watts" role="tab" data-toggle="tab" aria-controls="sales">Watts/hr</a>
-      </li>
+      </li>-->
       <li role="presentation">
         <a href="#alta" role="tab" data-toggle="tab" aria-controls="alta">Crear dispositivos</a>
       </li>
@@ -81,7 +68,7 @@
         </div>
       </div>
 
-      <div role="tabpanel" class="tab-pane" id="watts">
+      <!--<div role="tabpanel" class="tab-pane" id="watts">
         <div class="ex-line-graphs m-b-md">
           <canvas
             class="ex-line-graph"
@@ -94,7 +81,7 @@
             data-value="[{data: [2500, 3300, 2512, 2775, 2498, 3512, 2925, 4275, 3507, 3825, 3445, 3985]}]">
           </canvas>
         </div>
-      </div>
+      </div>-->
 
       <div role="tabpanel" class="tab-pane" id="alta">
         <div class="row">
@@ -111,8 +98,8 @@
             </div>
             <div class="row">
               <div class="col-sm-12 col-lg-12">
-                <a routerLink="../sensorC" class="btn btn-primary">Dar de alta un sensor calor</a>
-                <a routerLink="../sensorM" class="btn btn-primary">Dar de alta un sensor movimiento</a>
+                <a routerLink="../sensorC" class="btn btn-primary btn-add">Dar de alta un sensor calor</a>
+                <a routerLink="../sensorM" class="btn btn-primary btn-add">Dar de alta un sensor movimiento</a>
               </div>
             </div>
           </div>
@@ -124,9 +111,9 @@
             </div>
             <div class="row">
               <div class="col-sm-12 col-lg-12">
-                <a routerLink="../actuatorA" class="btn btn-success">Dar de alta un actuador aire</a>
-                <a routerLink="../actuatorC" class="btn btn-success">Dar de alta un actuador conector</a>
-                <a routerLink="../actuatorF" class="btn btn-success">Dar de alta un actuador foco</a>
+                <a routerLink="../actuatorA" class="btn btn-success btn-add">Dar de alta un actuador aire</a>
+                <a routerLink="../actuatorC" class="btn btn-success btn-add">Dar de alta un actuador conector</a>
+                <a routerLink="../actuatorF" class="btn btn-success btn-add">Dar de alta un actuador foco</a>
               </div>
             </div>
           </div>
@@ -138,7 +125,7 @@
             </div>
             <div class="row">
               <div class="col-sm-12 col-lg-12">
-                <a  class="btn btn-info" routerLink="../room">Dar de alta una habitación</a>
+                <a  class="btn btn-info btn-add" routerLink="../room">Dar de alta una habitación</a>
               </div>
             </div>
           </div>
@@ -175,7 +162,7 @@
             </h2>
             <hr class="statcard-hr m-b-0">
           </div>
-          <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[4,34,64,27,96,50,80]}]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 189px; height: 47px;"></canvas>
+          <canvas id="sparkline2" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[4,34,64,27,96,50,80]}]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 189px; height: 47px;"></canvas>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 m-b">
@@ -188,7 +175,7 @@
             </h2>
             <hr class="statcard-hr m-b-0">
           </div>
-          <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[12,38,32,60,36,54,68]}]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 189px; height: 47px;"></canvas>
+          <canvas id="sparkline3" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[12,38,32,60,36,54,68]}]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 189px; height: 47px;"></canvas>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 m-b">
@@ -201,7 +188,7 @@
             </h2>
             <hr class="statcard-hr m-b-0">
           </div>
-          <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[43,48,52,58,50,95,100]}]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 189px; height: 47px;"></canvas>
+          <canvas id="sparkline4" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[43,48,52,58,50,95,100]}]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 189px; height: 47px;"></canvas>
         </div>
       </div>
     </div>
@@ -214,85 +201,54 @@
           <h4 class="list-group-header">
             Cuartos
           </h4>
+
           <a *ngFor="let room of rooms" class="list-group-item">
             <span class="pull-right text-muted">{{room.maxconsumoEnergia}}</span>
             {{room.nombre}}
           </a>
+
         </div>
       </div>
 
       <div class="col-md-4 m-b-md">
         <div class="list-group">
           <h4 class="list-group-header">
-            Dispositivos más utilizados
+            Actuadores
           </h4>
 
-          <a *ngFor="" class="list-group-item" href="#">
-            <span class="pull-right text-muted">3,929,481</span>
-            Foco de escritorio 2
+          <a *ngFor="let actuatorA of actuatorsA" class="list-group-item">
+            <span class="pull-right text-muted">{{ actuatorA.consumoEnergia }}</span>
+            {{ actuatorA.nombre }}
           </a>
+          <a *ngFor="let actuatorC of actuatorsC" class="list-group-item">
+            <span class="pull-right text-muted">{{ actuatorC.consumoEnergia }}</span>
+            {{ actuatorC.nombre }}
+          </a>
+          <a *ngFor="let actuatorF of actuatorsF" class="list-group-item">
+            <span class="pull-right text-muted">{{ actuatorF.consumoEnergia }}</span>
+            {{ actuatorF.nombre }}
+          </a>
+
         </div>
       </div>
       <div class="col-md-4 m-b-md">
         <div class="list-group">
           <h4 class="list-group-header">
-            Otros
+            Sensores
           </h4>
 
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">3,929,481</span>
-            Desktop (1920x1080)
+          <a *ngFor="let sensorC of sensorsC" class="list-group-item">
+            <span class="pull-right text-muted">{{ sensorC.energia }}</span>
+            {{ sensorC.nombre }}
           </a>
 
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">1,143,393</span>
-            Desktop (1366x768)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">938,287</span>
-            Desktop (1440x900)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">749,393</span>
-            Desktop (1280x800)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">695,912</span>
-            Tablet (1024x768)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">501,938</span>
-            Tablet (768x1024)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">392,842</span>
-            Phone (320x480)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">298,183</span>
-            Phone (720x450)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">193,129</span>
-            Desktop (2560x1080)
-          </a>
-
-          <a class="list-group-item" href="#">
-            <span class="pull-right text-muted">93,382</span>
-            Desktop (2560x1600)
+          <a *ngFor="let sensorM of sensorsM" class="list-group-item">
+            <span class="pull-right text-muted">{{ sensorM.energia }}</span>
+            {{ sensorM.nombre }}
           </a>
 
         </div>
-        <a href="#" class="btn btn-primary-outline">Ver otros</a>
       </div>
     </div>
-    a
   </div>
 </div>
