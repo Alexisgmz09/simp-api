@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './history/history.component';
