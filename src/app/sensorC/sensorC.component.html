@@ -13,33 +13,34 @@
           <h4 class="list-group-header">
             Sensor
           </h4>
+          <form>
           <div class="list-group-item">
             Nombre:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" class="form-control" name="nombre">
             </div><br>
             Edificio:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" class="form-control" name="building">
             </div><br>
             Cuarto:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" class="form-control" name="room">
             </div><br>
             Descripción:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" class="form-control" name="desc">
             </div><br>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio1" name="radio">
+                <input type="radio" id="radioConec" name="radioConec" value="true">
                 <span class="custom-control-indicator"></span>
                 Conectado
               </label>
             </div>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio2" name="radio">
+                <input type="radio" id="radioDesc" name="radioConec" value="false">
                 <span class="custom-control-indicator"></span>
                 Desconectado
               </label>
@@ -50,20 +51,21 @@
             </div><br>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio1" name="radio">
+                <input type="radio" id="radioAct" name="radioAct" value="true">
                 <span class="custom-control-indicator"></span>
                 Activado
               </label>
             </div>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio2" name="radio">
+                <input type="radio" id="radioInac" name="radioAct" value="false">
                 <span class="custom-control-indicator"></span>
                 Desactivado
               </label>
             </div><br><br>
-            <a href="#" class="btn btn-success-outline">Crear sensor</a>
+            <button on-click="postSensorC()" class="btn btn-success-outline">Crear sensor</button>
           </div>
+          </form>
         </div>
       </div>
     </div>

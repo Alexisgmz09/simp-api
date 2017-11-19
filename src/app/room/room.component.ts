@@ -28,7 +28,6 @@ export class RoomComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    console.log('aquitoy');
     return this.http.post(this.apiRoot, {'id': this.cont++, 'nombre': this.name, 'ubicacionE': this.building, 'ubicacionC': this.loc,
       'minconsumoEnergia': this.minene, 'maxconsumoEnergia': this.maxene, 'mintemperatura': this.mintem, 'maxtemperatura': this.maxtem,
       'minVelocidad': this.minvel, 'maxVelocidad': this.maxvel }, options).toPromise()
