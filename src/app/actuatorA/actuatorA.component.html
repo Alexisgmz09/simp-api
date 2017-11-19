@@ -16,69 +16,58 @@
           <div class="list-group-item">
             Nombre:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" name="name" [(ngModel)]="name" class="form-control">
             </div><br>
             Velocidad:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" name="speed" [(ngModel)]="speed" class="form-control">
             </div><br>
             Unidad:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" name="unit" [(ngModel)]="unit" class="form-control">
             </div><br>
             Edificio:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" name="building" [(ngModel)]="building" class="form-control">
             </div><br>
             Cuarto:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
-            </div><br>
-            Consumo de Energia:<br>
-            <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" name="room" [(ngModel)]="room" class="form-control">
             </div><br>
             Descripción:<br>
             <div class="input">
-              <input type="text" value="" class="form-control">
+              <input type="text" value="" name="desc" [(ngModel)]="desc" class="form-control">
             </div><br>
-            Tipo de actuador:<br>
-            <div class="input">
-              <input type="text" value="" class="form-control">
-            </div><br>
+
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio1" name="radio">
+                <input type="radio" id="radioConec" value="true" name="radioConec">
                 <span class="custom-control-indicator"></span>
                 Conectado
               </label>
             </div>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio2" name="radio">
+                <input type="radio" id="radioDisconec" value="false" name="radioConec">
                 <span class="custom-control-indicator"></span>
                 Desconectado
               </label>
             </div><br><br>
-            Tipo de actuador:<br>
-            <div class="input">
-              <input type="text" value="" class="form-control">
-            </div><br>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio1" name="radio">
+                <input type="radio" id="radioAct" name="radioAct">
                 <span class="custom-control-indicator"></span>
                 Activado
               </label>
             </div>
             <div class="radio-inline custom-control custom-radio">
               <label>
-                <input type="radio" id="radio2" name="radio">
+                <input type="radio" id="radioInac" name="radioAct">
                 <span class="custom-control-indicator"></span>
                 Desactivado
               </label>
             </div><br><br>
-            <a href="#" class="btn btn-success-outline">Crear actuador</a>
+            <button on-click="postActuadorA()" class="btn btn-success-outline">Crear actuador</button>
           </div>
         </div>
       </div>
