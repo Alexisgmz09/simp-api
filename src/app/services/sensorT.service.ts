@@ -5,7 +5,7 @@ import { SensorTModel } from '../models/sensorT-model';
 
 @Injectable()
 
-export class SensorMService {
+export class SensorTService {
   apiRoot = 'http://localhost:8080/api/sistema/sensorTs';
   sensorsT: SensorTModel[];
 

@@ -28,6 +28,9 @@ import { ActuatorFService } from './services/actuatorF.service';
 import { RoomService } from './services/room.service';
 import { SensorCService } from './services/sensorC.service';
 import { SensorMService } from './services/sensorM.service';
+import { SensorLService } from './services/sensorL.service';
+import { SensorTService } from './services/sensorT.service';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -62,7 +65,9 @@ import { AppRoutingModule } from './app-routing.module';
     ActuatorFService,
     RoomService,
     SensorCService,
-    SensorMService
+    SensorMService,
+    SensorLService,
+    SensorTService
   ],
   bootstrap: [AppComponent]
 })
