@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpModule, Http, Response  } from '@angular/http';
 
 @Component({
   selector: 'app-actuator',
