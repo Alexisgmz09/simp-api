@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-
+// Components
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './history/history.component';
@@ -15,6 +15,14 @@ import { StateComponent } from './state/state.component';
 import { RoomComponent } from './room/room.component';
 import { ActuatorComponent } from './actuator/actuator.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+
+// Services
+import { ActuatorAService } from './services/actuatorA.service';
+import { ActuatorCService } from './services/actuatorC.service';
+import { ActuatorFService } from './services/actuatorF.service';
+import { RoomService } from './services/room.service';
+import { SensorCService } from './services/sensorC.service';
+import { SensorMService } from './services/sensorM.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,7 +46,14 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ActuatorAService,
+    ActuatorCService,
+    ActuatorFService,
+    RoomService,
+    SensorCService,
+    SensorMService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

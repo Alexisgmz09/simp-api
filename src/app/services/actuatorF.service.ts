@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Http, HttpModule, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { ActuatorCModel } from '../models/actuatorC-model';
+import { ActuatorFModel } from '../models/actuatorF-model';
 
 @Injectable()
 
-export class ActuatorCService {
-  apiRoot = 'http://localhost:8080/api/sistema/actuadorCs';
-  actuatorsC: ActuatorCModel[];
+export class ActuatorFService {
+  apiRoot = 'http://localhost:8080/api/sistema/actuadorFs';
+  actuatorsF: ActuatorFModel[];
 
   constructor(private http: Http) {
-    this.actuatorsC = [];
+    this.actuatorsF = [];
   }
 
-  getActuatorsC(): Promise<ActuatorCModel[]> {
+  getActuatorsF(): Promise<ActuatorFModel[]> {
     const apiURL = `${this.apiRoot}`;
     return this.http.get(apiURL)
       .toPromise()
       .then(
         res =>  // Success
-          res.json().actuatorsC as ActuatorCModel[]
+          res.json().actuatorsF as ActuatorFModel[]
       ).catch(this.handleError);
 
   }
@@ -29,9 +29,9 @@ export class ActuatorCService {
     return Promise.reject(error.message || error);
   }
 
-  getActuatorC(id: number): Promise<ActuatorCModel> {
-    return this.getActuatorsC()
-      .then(actuatorsC => actuatorsC.find(actuatorC => actuatorC.id === id));
+  getActuatorF(id: number): Promise<ActuatorFModel> {
+    return this.getActuatorsF()
+      .then(actuatorsF => actuatorsF.find(actuatorF => actuatorF.id === id));
   }
 
 }

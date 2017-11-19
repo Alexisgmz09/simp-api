@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Http, HttpModule, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { SensorCModel } from '../models/sensorC-model';
+import { SensorMModel } from '../models/sensorM-model';
 
 @Injectable()
 
-export class SensorCService {
+export class SensorMService {
   apiRoot = 'http://localhost:8080/api/sistema/sensorCs';
-  sensorsC: SensorCModel[];
+  sensorsM: SensorMModel[];
 
   constructor(private http: Http) {
-    this.sensorsC = [];
+    this.sensorsM = [];
   }
 
-  getSensorsC(): Promise<SensorCModel[]> {
+  getSensorsM(): Promise<SensorMModel[]> {
     const apiURL = `${this.apiRoot}`;
     return this.http.get(apiURL)
       .toPromise()
       .then(
         res =>  // Success
-          res.json().sensorsC as SensorCModel[]
+          res.json().sensorsM as SensorMModel[]
       ).catch(this.handleError);
 
   }
@@ -29,9 +29,9 @@ export class SensorCService {
     return Promise.reject(error.message || error);
   }
 
-  getSensorC(id: number): Promise<SensorCModel> {
-    return this.getSensorsC()
-      .then(sensorsC => sensorsC.find(sensorC => sensorC.id === id));
+  getSensorM(id: number): Promise<SensorMModel> {
+    return this.getSensorsM()
+      .then(sensorsM => sensorsM.find(sensorM => sensorM.id === id));
   }
 
 }
