@@ -1,7 +1,7 @@
 export class ActuatorFModel {
   constructor(
-    public nombre: string,
     public id: number,
+    public nombre: string,
     public unidad: string,
     public ubicacionE: string,
     public ubicacionC: string,
