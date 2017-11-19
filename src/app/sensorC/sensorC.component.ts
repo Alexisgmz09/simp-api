@@ -38,7 +38,7 @@ export class SensorCComponent implements OnInit {
       'nombre': this.name
     }, options).toPromise()
       .then(this.extractData)
-      .then(this.handleErrorPromise);
+      .catch(this.handleErrorPromise);
   }
   private extractData(res: Response) {
     let body = res.json();
