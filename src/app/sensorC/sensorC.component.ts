@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { SensorCModel } from '../models/sensorC-model';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-sensorC',
@@ -18,7 +19,7 @@ export class SensorCComponent implements OnInit {
   radioAct: boolean;
   cont = 1;
   sensor: SensorCModel = new SensorCModel(this.cont++, '', '', '', 'SensorC', false, false, false, 0, '');
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,7 @@ export class SensorCComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    this.router.navigateByUrl('/home');
     return this.http.post(this.apiRoot,{'id': this.cont++,
       'ubicacionE': this.building,
       'ubicacionC': this.room,
