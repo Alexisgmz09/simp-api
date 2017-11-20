@@ -22,8 +22,8 @@ export class ActuatorAService {
           res => {
             this.actuatorsA = res.json().map((item: any) => {
               return new ActuatorAModel(
-                item.nombre,
                 item.id,
+                item.nombre,
                 item.velocidad,
                 item.unidad,
                 item.ubicacionE,

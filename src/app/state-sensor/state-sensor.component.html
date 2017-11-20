@@ -19,101 +19,76 @@
               <th>Nombre Dispositivo</th>
               <th>Edificio</th>
               <th>Habitación</th>
-              <th>Estatus</th>
               <th>Desactivar</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <ng-container *ngFor="let actuatorA of actuatorsA">
+              <tr *ngIf="actuatorA.estado">
+                <td>{{actuatorA.id }}</td>
+                <td>{{ actuatorA.nombre }}</td>
+                <td>{{ actuatorA.descripcion }}</td>
+                <td>{{ actuatorA.ubicacionC }} {{ actuatorA.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let actuatorC of actuatorsC">
+              <tr *ngIf="actuatorC.estado">
+                <td>{{actuatorC.id }}</td>
+                <td>{{ actuatorC.nombre }}</td>
+                <td>{{ actuatorC.descripcion }}</td>
+                <td>{{ actuatorC.ubicacionC }} {{ actuatorC.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let actuatorF of actuatorsF">
+              <tr *ngIf="actuatorF.estado">
+                <td>{{actuatorF.id }}</td>
+                <td>{{ actuatorF.nombre }}</td>
+                <td>{{ actuatorF.descripcion }}</td>
+                <td>{{ actuatorF.ubicacionC }} {{ actuatorF.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorC of sensorsC">
+              <tr *ngIf="sensorC.estado">
+                <td>{{sensorC.id }}</td>
+                <td>{{ sensorC.nombre }}</td>
+                <td>{{ sensorC.descripcion }}</td>
+                <td>{{ sensorC.ubicacionC }} {{ sensorC.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorM of sensorsM">
+              <tr *ngIf="sensorM.estado">
+                <td>{{sensorM.id }}</td>
+                <td>{{ sensorM.nombre }}</td>
+                <td>{{ sensorM.descripcion }}</td>
+                <td>{{ sensorM.ubicacionC }} {{ sensorM.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorL of sensorsL">
+              <tr *ngIf="sensorL.estado">
+                <td>{{sensorL.id }}</td>
+                <td>{{ sensorL.nombre }}</td>
+                <td>{{ sensorL.descripcion }}</td>
+                <td>{{ sensorL.ubicacionC }} {{ sensorL.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorT of sensorsT">
+              <tr *ngIf="sensorT.estado">
+                <td>{{sensorT.id }}</td>
+                <td>{{ sensorT.nombre }}</td>
+                <td>{{ sensorT.descripcion }}</td>
+                <td>{{ sensorT.ubicacionC }} {{ sensorT.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
 
-              <td><a href="#">#10001</a></td>
-              <td>Luz 1</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
 
-              <td><a href="#">#10002</a></td>
-              <td>Luz 2</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
 
-              <td><a href="#">#10003</a></td>
-              <td>Luz 3</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10004</a></td>
-              <td>Luz 4</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10005</a></td>
-              <td>Luz 5</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10006</a></td>
-              <td>Luz 6</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10007</a></td>
-              <td>Luz 7</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10008</a></td>
-              <td>Luz 8</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10009</a></td>
-              <td>Luz 9</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10010</a></td>
-              <td>Luz 10</td>
-              <td>Descripcion</td>
-              <td>Habitación 1</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
             </tbody>
           </table>
         </div>
@@ -136,101 +111,74 @@
               <th>Nombre Dispositivo</th>
               <th>Edificio</th>
               <th>Habitación</th>
-              <th>Estatus</th>
               <th>Activar</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <ng-container *ngFor="let actuatorA of actuatorsA">
+              <tr *ngIf="!actuatorA.estado">
+                <td>{{actuatorA.id }}</td>
+                <td>{{ actuatorA.nombre }}</td>
+                <td>{{ actuatorA.descripcion }}</td>
+                <td>{{ actuatorA.ubicacionC }} {{ actuatorA.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let actuatorC of actuatorsC">
+              <tr *ngIf="!actuatorC.estado">
+                <td>{{actuatorC.id }}</td>
+                <td>{{ actuatorC.nombre }}</td>
+                <td>{{ actuatorC.descripcion }}</td>
+                <td>{{ actuatorC.ubicacionC }} {{ actuatorC.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let actuatorF of actuatorsF">
+              <tr *ngIf="!actuatorF.estado">
+                <td>{{actuatorF.id }}</td>
+                <td>{{ actuatorF.nombre }}</td>
+                <td>{{ actuatorF.descripcion }}</td>
+                <td>{{ actuatorF.ubicacionC }} {{ actuatorF.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorC of sensorsC">
+              <tr *ngIf="!sensorC.estado">
+                <td>{{sensorC.id }}</td>
+                <td>{{ sensorC.nombre }}</td>
+                <td>{{ sensorC.descripcion }}</td>
+                <td>{{ sensorC.ubicacionC }} {{ sensorC.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorM of sensorsM">
+              <tr *ngIf="!sensorM.estado">
+                <td>{{sensorM.id }}</td>
+                <td>{{ sensorM.nombre }}</td>
+                <td>{{ sensorM.descripcion }}</td>
+                <td>{{ sensorM.ubicacionC }} {{ sensorM.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorL of sensorsL">
+              <tr *ngIf="!sensorL.estado">
+                <td>{{sensorL.id }}</td>
+                <td>{{ sensorL.nombre }}</td>
+                <td>{{ sensorL.descripcion }}</td>
+                <td>{{ sensorL.ubicacionC }} {{ sensorL.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
+            <ng-container *ngFor="let sensorT of sensorsT">
+              <tr *ngIf="!sensorT.estado">
+                <td>{{sensorT.id }}</td>
+                <td>{{ sensorT.nombre }}</td>
+                <td>{{ sensorT.descripcion }}</td>
+                <td>{{ sensorT.ubicacionC }} {{ sensorT.ubicacionE}}</td>
+                <td> <span class="icon icon-switch"></span></td>
+              </tr>
+            </ng-container>
 
-              <td><a href="#">#10001</a></td>
-              <td>Luz 1</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10002</a></td>
-              <td>Luz 2</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10003</a></td>
-              <td>Luz 3</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Apagado</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10004</a></td>
-              <td>Luz 4</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10005</a></td>
-              <td>Luz 5</td>
-              <td>Descripcion</td>
-              <td>01/02/2015</td>
-              <td>Apagado</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10006</a></td>
-              <td>Luz 6</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Apagado</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10007</a></td>
-              <td>Luz 7</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Apagado</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10008</a></td>
-              <td>Luz 8</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Apagado</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10009</a></td>
-              <td>Luz 9</td>
-              <td>Descripcion</td>
-              <td>01/01/2015</td>
-              <td>Encendido</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
-            <tr>
-
-              <td><a href="#">#10010</a></td>
-              <td>Luz 10</td>
-              <td>Descripcion</td>
-              <td>01/02/2015</td>
-              <td>Apagado</td>
-              <td> <span class="icon icon-switch"></span></td>
-            </tr>
             </tbody>
           </table>
         </div>

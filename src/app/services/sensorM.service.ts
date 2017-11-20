@@ -22,9 +22,9 @@ export class SensorMService {
           res => {
             this.sensorsM = res.json().map((item: any) => {
               return new SensorMModel(
+                item.id,
                 item.ubicacionE,
                 item.ubicacionC,
-                item.id,
                 item.descripcion,
                 item.tipoSensor,
                 item.estado,

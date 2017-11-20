@@ -22,8 +22,8 @@ export class ActuatorFService {
           res => {
             this.actuatorsF = res.json().map((item: any) => {
               return new ActuatorFModel(
-                item.nombre,
                 item.id,
+                item.nombre,
                 item.unidad,
                 item.ubicacionE,
                 item.ubicacionC,
