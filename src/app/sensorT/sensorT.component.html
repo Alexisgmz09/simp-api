@@ -17,48 +17,44 @@
             <div class="list-group-item">
               Nombre:<br>
               <div class="input">
-                <input type="text" value="" class="form-control">
+                <input type="text" value="" name="name" [(ngModel)]="name" class="form-control">
               </div><br>
               Edificio:<br>
               <div class="input">
-                <input type="text" value="" class="form-control">
+                <input type="text" value="" name="building" [(ngModel)]="building" class="form-control">
               </div><br>
               Cuarto:<br>
               <div class="input">
-                <input type="text" value="" class="form-control">
+                <input type="text" value="" name="room" [(ngModel)]="room" class="form-control">
               </div><br>
               Descripción:<br>
               <div class="input">
-                <input type="text" value="" class="form-control">
+                <input type="text" value="" name="desc" [(ngModel)]="desc" class="form-control">
               </div><br>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radio1" name="radio">
+                  <input type="radio" id="radioConec" value="true" name="radioConec" [(ngModel)]="radioConec">
                   <span class="custom-control-indicator"></span>
                   Conectado
                 </label>
               </div>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radio2" name="radio">
+                  <input type="radio" id="radioDesconec" value="false" name="radioConec" [(ngModel)]="radioConec">
                   <span class="custom-control-indicator"></span>
                   Desconectado
                 </label>
               </div><br><br>
-              Tipo de sensor:<br>
-              <div class="input">
-                <input type="text" value="" class="form-control">
-              </div><br>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radio3" name="radio">
+                  <input type="radio" id="radioAct" value="true" name="radioAct" [(ngModel)]="radioAct">
                   <span class="custom-control-indicator"></span>
                   Activado
                 </label>
               </div>
               <div class="radio-inline custom-control custom-radio">
                 <label>
-                  <input type="radio" id="radio4" name="radio">
+                  <input type="radio" id="radioInac" value="false" name="radioAct" [(ngModel)]="radioAct">
                   <span class="custom-control-indicator"></span>
                   Desactivado
                 </label>
