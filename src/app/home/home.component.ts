@@ -18,6 +18,8 @@ import { SensorTModel } from '../models/sensorT-model';
 import { SensorTService } from '../services/sensorT.service';
 import { SensorLModel } from '../models/sensorL-model';
 import { SensorLService } from '../services/sensorL.service';
+import { Router } from "@angular/router";
+import { UserService } from '../services/user.service';
 
 
 
@@ -43,9 +45,14 @@ export class HomeComponent implements OnInit {
   constructor(private roomService: RoomService, private actuatorAService: ActuatorAService,
               private actuatorCService: ActuatorCService, private actuatorFService: ActuatorFService,
               private sensorCService: SensorCService, private sensorMService: SensorMService,
-              private sensorTService: SensorTService, private sensorLService: SensorLService) { }
+              private sensorTService: SensorTService, private sensorLService: SensorLService, private router:Router,
+              private userService:UserService) { }
 
   ngOnInit() {
+    console.log(this.userService.user);
+    if(this.userService.user===undefined|| this.userService.user===""){
+      this.router.navigateByUrl('/login');
+    }
     this.roomService.getRooms().then(rooms => this.rooms = rooms.slice(0, 10));
 
     this.actuatorAService.getActuatorsA().then(actuatorsA => this.actuatorsA = actuatorsA.slice(0, 2));

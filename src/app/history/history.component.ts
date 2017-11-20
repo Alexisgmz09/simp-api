@@ -15,6 +15,8 @@ import { SensorLModel } from '../models/sensorL-model';
 import { SensorLService } from '../services/sensorL.service';
 import { SensorTModel } from '../models/sensorT-model';
 import { SensorTService } from '../services/sensorT.service';
+import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-history',
@@ -34,10 +36,14 @@ export class HistoryComponent implements OnInit {
   constructor(private actuatorAService: ActuatorAService, private actuatorCService: ActuatorCService,
               private actuatorFService: ActuatorFService, private sensorCService: SensorCService,
               private sensorMService: SensorMService, private sensorLService: SensorLService,
-              private sensorTService: SensorTService) {
+              private sensorTService: SensorTService, private userService:UserService,
+              private router:Router) {
   }
 
   ngOnInit() {
+    if(this.userService.user===undefined|| this.userService.user===""){
+      this.router.navigateByUrl('/login');
+    }
     this.actuatorAService.getActuatorsA().then(actuatorsA => this.actuatorsA = actuatorsA);
     this.actuatorCService.getActuatorsC().then(actuatorsC => this.actuatorsC = actuatorsC);
     this.actuatorFService.getActuatorsF().then(actuatorsF => this.actuatorsF = actuatorsF);
