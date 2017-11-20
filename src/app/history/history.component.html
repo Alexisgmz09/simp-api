@@ -5,7 +5,7 @@
     <div class="dashhead">
       <div class="dashhead-titles">
         <h6 class="dashhead-subtitle">Save Me Money Please</h6>
-        <h2 class="dashhead-title">Historial Actuadores</h2>
+        <h2 class="dashhead-title">Historial</h2>
       </div>
 
     </div>
@@ -13,198 +13,285 @@
     <div class="flextable table-actions">
       <div class="flextable-item flextable-primary">
         <div class="btn-toolbar-item input-with-icon">
-          <!-- <input type="text" class="form-control input-block" placeholder="Buscar historial">
-          <span class="icon icon-magnifying-glass"></span> -->
         </div>
       </div>
-      <div class="flextable-item">
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary-outline">
-            <span>Sensores</span>
-          </button>
-          <button type="button" class="btn btn-primary">
-            <span>Actuadores</span>
-          </button>
-        </div>
-      </div>
+      <ul class="nav nav-bordered m-t m-b-0" role="tablist">
+        <li class="active" role="presentation">
+          <a href="#sensors" role="tab" data-toggle="tab" aria-controls="traffic">Sensores</a>
+        </li>
+        <li role="presentation">
+          <a href="#actuators" role="tab" data-toggle="tab" aria-controls="alta">Actuadores</a>
+        </li>
+      </ul>
     </div>
 
-    <div class="table-full">
-      <div class="table-responsive">
-        <table class="table" data-sort="table">
-          <thead>
-          <tr>
-            <th># Dispositivo</th>
-            <th>Nombre Dispositivo</th>
-            <th>Tipo</th>
-            <th>Descripción Evento</th>
-            <th>Fecha</th>
-            <th>Estatus</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td><a href="#">#10001</a></td>
-            <td>Luz 1</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10002</a></td>
-            <td>Calentador 1</td>
-            <td>Calefaccion</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10003</a></td>
-            <td>Luz 2</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10004</a></td>
-            <td>Luz 3</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10005</a></td>
-            <td>Luz 4</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/02/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10006</a></td>
-            <td>Luz 5</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10007</a></td>
-            <td>Luz 6</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10008</a></td>
-            <td>Luz 7</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10009</a></td>
-            <td>Luz 8</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10010</a></td>
-            <td>Luz 9</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/02/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10011</a></td>
-            <td>Luz 10</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10012</a></td>
-            <td>Calentador 2</td>
-            <td>Calefaccion</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10013</a></td>
-            <td>Luz 11</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10014</a></td>
-            <td>Luz 12</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10015</a></td>
-            <td>Luz 15</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/02/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10016</a></td>
-            <td>Luz 13</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10017</a></td>
-            <td>Aire acondicionado 1</td>
-            <td>Aire Acondicionado</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Apagado</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10018</a></td>
-            <td>Luz 14</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10019</a></td>
-            <td>Luz 15</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/01/2015</td>
-            <td>Encendido</td>
-          </tr>
-          <tr>
-            <td><a href="#">#10020</a></td>
-            <td>Luz 16</td>
-            <td>Luces</td>
-            <td>Descripcion</td>
-            <td>01/02/2015</td>
-            <td>Apagado</td>
-          </tbody>
-        </table>
+    <hr class="m-t-0 m-b-sm">
+
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane active" id="sensors">
+        <ul class="nav nav-bordered m-t m-b-0" role="tablist">
+          <li class="active" role="presentation">
+            <a href="#sensorsC" role="tab" data-toggle="tab" aria-controls="traffic">Conexiones</a>
+          </li>
+          <li role="presentation">
+            <a href="#sensorsL" role="tab" data-toggle="tab" aria-controls="alta">Luces</a>
+          </li>
+          <li role="presentation">
+            <a href="#sensorsM" role="tab" data-toggle="tab" aria-controls="alta">Movimiento</a>
+          </li>
+          <li role="presentation">
+            <a href="#sensorsT" role="tab" data-toggle="tab" aria-controls="alta">Temperatura</a>
+          </li>
+        </ul>
+
+        <br>
+        <hr class="m-t-0 m-b-sm">
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="sensorsC">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Energía</th>
+                    <th>Estado</th>
+                    <th>Consume</th>
+                    <th>Conectado</th>
+                    <th>Descripción</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let sensorC of sensorsC">
+                    <td>{{ sensorC.nombre }}</td>
+                    <td>{{ sensorC.ubicacionE }}</td>
+                    <td>{{ sensorC.ubicacionC }}</td>
+                    <td>{{ sensorC.energia }}</td>
+                    <td>{{ sensorC.estado }}</td>
+                    <td>{{ sensorC.consume }}</td>
+                    <td>{{ sensorC.conectado }}</td>
+                    <td>{{ sensorC.descripcion }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sensorsL">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Energía</th>
+                    <th>Estado</th>
+                    <th>Conectado</th>
+                    <th>Descripción</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let sensorL of sensorsL">
+                    <td>{{ sensorL.nombre }}</td>
+                    <td>{{ sensorL.ubicacionE }}</td>
+                    <td>{{ sensorL.ubicacionC }}</td>
+                    <td>{{ sensorL.cantidadLuz }}</td>
+                    <td>{{ sensorL.estado }}</td>
+                    <td>{{ sensorL.conectado }}</td>
+                    <td>{{ sensorL.descripcion }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sensorsM">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Movimiento</th>
+                    <th>Estado</th>
+                    <th>Conectado</th>
+                    <th>Descripción</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let sensorM of sensorsM">
+                    <td>{{ sensorM.nombre }}</td>
+                    <td>{{ sensorM.ubicacionE }}</td>
+                    <td>{{ sensorM.ubicacionC }}</td>
+                    <td>{{ sensorM.movimiento }}</td>
+                    <td>{{ sensorM.estado }}</td>
+                    <td>{{ sensorM.conectado }}</td>
+                    <td>{{ sensorM.descripcion }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sensorsT">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Temperatura</th>
+                    <th>Estado</th>
+                    <th>Conectado</th>
+                    <th>Descripción</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let sensorT of sensorsT">
+                    <td>{{ sensorT.nombre }}</td>
+                    <td>{{ sensorT.ubicacionE }}</td>
+                    <td>{{ sensorT.ubicacionC }}</td>
+                    <td>{{ sensorT.temperatura }}</td>
+                    <td>{{ sensorT.estado }}</td>
+                    <td>{{ sensorT.conectado }}</td>
+                    <td>{{ sensorT.descripcion }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div role="tabpanel" class="tab-pane" id="actuators">
+        <ul class="nav nav-bordered m-t m-b-0" role="tablist">
+          <li class="active" role="presentation">
+            <a href="#actuatorsA" role="tab" data-toggle="tab" aria-controls="traffic">Aire Acondicionado</a>
+          </li>
+          <li role="presentation">
+            <a href="#actuatorsC" role="tab" data-toggle="tab" aria-controls="alta">Cafelacción</a>
+          </li>
+          <li role="presentation">
+            <a href="#actuatorsF" role="tab" data-toggle="tab" aria-controls="alta">Focos</a>
+          </li>
+        </ul>
+
+        <br>
+        <hr class="m-t-0 m-b-sm">
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="actuatorsA">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Velocidad</th>
+                    <th>Consumo Energía</th>
+                    <th>Estado</th>
+                    <th>Conectado</th>
+                    <th>Temperatura</th>
+                    <th>Descripcion</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let actuatorA of actuatorsA">
+                    <td>{{ actuatorA.nombre }}</td>
+                    <td>{{ actuatorA.ubicacionE }}</td>
+                    <td>{{ actuatorA.ubicacionC }}</td>
+                    <td>{{ actuatorA.consumoEnergia }}</td>
+                    <td>{{ actuatorA.velocidad }}{{ actuatorA.unidad }}</td>
+                    <td>{{ actuatorA.estado }}</td>
+                    <td>{{ actuatorA.conectado }}</td>
+                    <td>{{ actuatorA.temperatura }}ºC</td>
+                    <td>{{ actuatorA.descripcion}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="actuatorsC">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Consumo Energía</th>
+                    <th>Estado</th>
+                    <th>Conectado</th>
+                    <th>Temperatura</th>
+                    <th>Descripcion</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let actuatorC of actuatorsC">
+                    <td>{{ actuatorC.nombre }}</td>
+                    <td>{{ actuatorC.ubicacionE }}</td>
+                    <td>{{ actuatorC.ubicacionC }}</td>
+                    <td>{{ actuatorC.consumoEnergia }}</td>
+                    <td>{{ actuatorC.estado }}</td>
+                    <td>{{ actuatorC.conectado }}</td>
+                    <td>{{ actuatorC.temperatura }}ºC</td>
+                    <td>{{ actuatorC.descripcion}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="actuatorsF">
+            <div class="table-full">
+              <div class="table-responsive">
+                <table class="table" data-sort="table">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Edificio</th>
+                    <th>Cuarto</th>
+                    <th>Consumo Energía</th>
+                    <th>Estado</th>
+                    <th>Conectado</th>
+                    <th>Intensidad</th>
+                    <th>Descripcion</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let actuatorF of actuatorsF">
+                    <td>{{ actuatorF.nombre }}</td>
+                    <td>{{ actuatorF.ubicacionE }}</td>
+                    <td>{{ actuatorF.ubicacionC }}</td>
+                    <td>{{ actuatorF.consumoEnergia }}</td>
+                    <td>{{ actuatorF.estado }}</td>
+                    <td>{{ actuatorF.conectado }}</td>
+                    <td>{{ actuatorF.intensidad }}{{ actuatorF.unidad }}</td>
+                    <td>{{ actuatorF.descripcion}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
