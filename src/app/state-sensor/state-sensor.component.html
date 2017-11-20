@@ -29,7 +29,7 @@
                 <td>{{ actuatorA.nombre }}</td>
                 <td>{{ actuatorA.descripcion }}</td>
                 <td>{{ actuatorA.ubicacionC }} {{ actuatorA.ubicacionE}}</td>
-                <td> <button on-click="deleteActuatorA({{actuatorA.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteActuatorA()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
 
               </tr>
             </ng-container>
@@ -39,7 +39,7 @@
                 <td>{{ actuatorC.nombre }}</td>
                 <td>{{ actuatorC.descripcion }}</td>
                 <td>{{ actuatorC.ubicacionC }} {{ actuatorC.ubicacionE}}</td>
-                <td> <button on-click="deleteActuatorC({{actuatorC.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteActuatorC()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let actuatorF of actuatorsF">
@@ -48,7 +48,7 @@
                 <td>{{ actuatorF.nombre }}</td>
                 <td>{{ actuatorF.descripcion }}</td>
                 <td>{{ actuatorF.ubicacionC }} {{ actuatorF.ubicacionE}}</td>
-                <td> <button on-click="deleteActuatorF({{actuatorF.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteActuatorF()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let sensorC of sensorsC">
@@ -57,7 +57,7 @@
                 <td>{{ sensorC.nombre }}</td>
                 <td>{{ sensorC.descripcion }}</td>
                 <td>{{ sensorC.ubicacionC }} {{ sensorC.ubicacionE}}</td>
-                <td> <button on-click="deleteSensorC({{sensorC.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteSensorC()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let sensorM of sensorsM">
@@ -66,7 +66,7 @@
                 <td>{{ sensorM.nombre }}</td>
                 <td>{{ sensorM.descripcion }}</td>
                 <td>{{ sensorM.ubicacionC }} {{ sensorM.ubicacionE}}</td>
-                <td> <button on-click="deleteSensorM({{sensorM.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteSensorM()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let sensorL of sensorsL">
@@ -75,7 +75,7 @@
                 <td>{{ sensorL.nombre }}</td>
                 <td>{{ sensorL.descripcion }}</td>
                 <td>{{ sensorL.ubicacionC }} {{ sensorL.ubicacionE}}</td>
-                <td> <button on-click="deleteSensorL({{sensorL.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteSensorL()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let sensorT of sensorsT">
@@ -84,7 +84,7 @@
                 <td>{{ sensorT.nombre }}</td>
                 <td>{{ sensorT.descripcion }}</td>
                 <td>{{ sensorT.ubicacionC }} {{ sensorT.ubicacionE}}</td>
-                <td> <button on-click="deleteSensorT({{sensorT.id}})" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
+                <td> <button on-click="deleteSensorT()" class="btn btn-success-outline"><span class="icon icon-switch"></span></button></td>
               </tr>
             </ng-container>
 
