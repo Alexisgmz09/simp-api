@@ -53,79 +53,79 @@ export class StateSensorComponent implements OnInit {
     this.sensorMService.getSensorsM().then(sensorsM => this.sensorsM = sensorsM);
     this.sensorTService.getSensorsT().then(sensorsT => this.sensorsT = sensorsT);
   }
-  deleteActuatorA( id: number): Promise<Response>{
+  deleteActuatorA( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarActuadorA',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }
-  deleteActuatorC( id: number): Promise<Response>{
+  deleteActuatorC( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarActuadorC',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }
-  deleteActuatorF( id: number): Promise<Response>{
+  deleteActuatorF( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarActuadorF',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }
-  deleteSensorC( id: number): Promise<Response>{
+  deleteSensorC( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorC',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }
-  deleteSensorL( id: number): Promise<Response>{
+  deleteSensorL( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorL',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }
-  deleteSensorM( id: number): Promise<Response>{
+  deleteSensorM( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorM',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }
-  deleteSensorT( id: number): Promise<Response>{
+  deleteSensorT( id: number, state:boolean): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorT',{
       'id': id,
-      'estado': false
+      'estado': state
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
