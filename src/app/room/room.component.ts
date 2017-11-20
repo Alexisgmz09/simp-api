@@ -42,7 +42,7 @@ export class RoomComponent implements OnInit {
         'maxtemperatura': this.maxtem,
         'minVelocidad': this.minvel,
         'maxVelocidad': this.maxvel,
-      'threshold': this.threshold},
+        'threshold': this.threshold},
       options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);

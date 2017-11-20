@@ -19,22 +19,22 @@ export class LoginComponent implements OnInit {
   login():void{
 
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
-    'Access-Control-Allow-Credentials': true});
+      'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     this.http.post('http://localhost:8080/api/sistema/login',{
-    'username': this.username,
-    'password': this.password
+      'username': this.username,
+      'password': this.password
     }, options).toPromise()
-     .then(res => {
-       if(res != undefined){
-         this.userService.user = res.json().username;
-         console.log(this.userService.user);
-         this.router.navigateByUrl('/home');
-       }else{
-         this.userService.user = undefined;
-         console.log(res);
-       }
-    })
-    .catch(err=>{this.userService.user = undefined;console.log(err);});
+      .then(res => {
+        if(res != undefined){
+          this.userService.user = res.json().username;
+          console.log(this.userService.user);
+          this.router.navigateByUrl('/home');
+        }else{
+          this.userService.user = undefined;
+          console.log(res);
+        }
+      })
+      .catch(err=>{this.userService.user = undefined;console.log(err);});
   }
 }

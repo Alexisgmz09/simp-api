@@ -91,15 +91,15 @@ export class StateComponent implements OnInit {
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     this.http.post('http://localhost:8080/api/sistema/borrarActuadorF',{
-    'id': id,
+      'id': id,
       'estado': false
-  }, options).toPromise()
-.then(res => {
-  console.log(res);
-})
-.catch(this.handleErrorPromise);
+    }, options).toPromise()
+      .then(res => {
+        console.log(res);
+      })
+      .catch(this.handleErrorPromise);
     window.location.reload();
-}
+  }
   deleteSensorC( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
