@@ -32,9 +32,10 @@
               <button type="button" class="btn btn-primary-outline">
                 <span class="icon icon-pencil"></span>
               </button>
-              <button type="button" class="btn btn-danger-outline">
-                <span class="icon icon-erase"></span>
-              </button>
+             <button on-click="deleteActuatorA(actuatorA.id)" class="btn btn-danger-outline">
+               <span class="icon icon-erase"></span>
+             </button>
+
             </div></td>
           </tr>
 
@@ -47,7 +48,7 @@
               <button type="button" class="btn btn-primary-outline">
                 <span class="icon icon-pencil"></span>
               </button>
-              <button type="button" class="btn btn-danger-outline">
+              <button on-click="deleteActuatorC(actuatorC.id)" class="btn btn-danger-outline">
                 <span class="icon icon-erase"></span>
               </button>
             </div></td>
@@ -62,7 +63,7 @@
               <button type="button" class="btn btn-primary-outline">
                 <span class="icon icon-pencil"></span>
               </button>
-              <button type="button" class="btn btn-danger-outline">
+              <button on-click="deleteActuatorF(actuatorF.id)" class="btn btn-danger-outline">
                 <span class="icon icon-erase"></span>
               </button>
             </div></td>
@@ -77,7 +78,22 @@
               <button type="button" class="btn btn-primary-outline">
                 <span class="icon icon-pencil"></span>
               </button>
-              <button type="button" class="btn btn-danger-outline">
+              <button on-click="deleteSensorC(sensorC.id)" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+
+          <tr *ngFor="let sensorL of sensorsL">
+            <td>{{sensorL.id}}</td>
+            <td>{{sensorL.nombre}}</td>
+            <td>{{ sensorL.ubicacionC }}</td>
+            <td>{{ sensorL.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button on-click="deleteSensorL(sensorL.id)" class="btn btn-danger-outline">
                 <span class="icon icon-erase"></span>
               </button>
             </div></td>
@@ -92,7 +108,21 @@
               <button type="button" class="btn btn-primary-outline">
                 <span class="icon icon-pencil"></span>
               </button>
-              <button type="button" class="btn btn-danger-outline">
+              <button on-click="deleteSensorM(sensorM.id)" class="btn btn-danger-outline">
+                <span class="icon icon-erase"></span>
+              </button>
+            </div></td>
+          </tr>
+          <tr *ngFor="let sensorT of sensorsT">
+            <td>{{sensorT.id}}</td>
+            <td>{{sensorT.nombre}}</td>
+            <td>{{ sensorT.ubicacionC }}</td>
+            <td>{{ sensorT.estado }}</td>
+            <td>  <div class="btn-group">
+              <button type="button" class="btn btn-primary-outline">
+                <span class="icon icon-pencil"></span>
+              </button>
+              <button on-click="deleteSensorT(sensorT.id)" class="btn btn-danger-outline">
                 <span class="icon icon-erase"></span>
               </button>
             </div></td>
