@@ -54,7 +54,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarActuadorA',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarActuadorA',{
       'id': id,
       'estado': false
     }, options).toPromise()
@@ -65,7 +65,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarActuadorC',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarActuadorC',{
       'id': id,
       'estado': false
     }, options).toPromise()
@@ -76,7 +76,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarActuadorF',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarActuadorF',{
       'id': id,
       'estado': false
     }, options).toPromise()
@@ -87,7 +87,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarSensorC',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarSensorC',{
       'id': id,
       'estado': false
     }, options).toPromise()
@@ -98,7 +98,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarSensorL',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarSensorL',{
       'id': id,
       'estado': false
     }, options).toPromise()
@@ -109,7 +109,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarSensorM',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarSensorM',{
       'id': id,
       'estado': false
     }, options).toPromise()
@@ -120,7 +120,7 @@ export class StateComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('localhost:8080/api/sistema/borrarSensorT',{
+    return this.http.post('http://localhost:8080/api/sistema/borrarSensorT',{
       'id': id,
       'estado': false
     }, options).toPromise()
