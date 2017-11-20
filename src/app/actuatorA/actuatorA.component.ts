@@ -20,7 +20,7 @@ export class ActuatorAComponent implements OnInit {
   desc: string;
   radioConec: boolean;
   radioAct: boolean;
-  constructor(private http: Http,private router: Router, private actServ:ActuatorAService) { }
+  constructor(private http: Http,private router: Router, private actServ: ActuatorAService) { }
 
   ngOnInit() {
   }
