@@ -3,6 +3,8 @@ import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { RoomModel } from '../models/room-model';
 import { Router } from "@angular/router";
+import { RoomService } from '../services/room.service';
+
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
@@ -19,9 +21,7 @@ export class RoomComponent implements OnInit {
   maxtem: number;
   minvel: number;
   maxvel: number;
-  cont = 1;
-  room: RoomModel = new RoomModel(this.cont++, ' ', 0, 0, ' ', ' ', 0, 0, 0, 0);
-  constructor(private http: Http, private router: Router) {}
+  constructor(private http: Http, private router: Router, private roomServ: RoomService) {}
 
   ngOnInit() {
   }
@@ -30,7 +30,7 @@ export class RoomComponent implements OnInit {
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
-    return this.http.post(this.apiRoot, {'id': this.cont++, 'nombre': this.name, 'ubicacionE': this.building, 'ubicacionC': this.loc,
+    return this.http.post(this.apiRoot, {'id': this.roomServ.cont++, 'nombre': this.name, 'ubicacionE': this.building, 'ubicacionC': this.loc,
       'minconsumoEnergia': this.minene, 'maxconsumoEnergia': this.maxene, 'mintemperatura': this.mintem, 'maxtemperatura': this.maxtem,
       'minVelocidad': this.minvel, 'maxVelocidad': this.maxvel }, options).toPromise()
       .then(this.extractData)

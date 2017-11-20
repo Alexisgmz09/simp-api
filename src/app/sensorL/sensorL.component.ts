@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Router } from "@angular/router";
+import { SensorLService } from '../services/sensorL.service';
 
 @Component({
   selector: 'app-sensorL',
@@ -15,9 +16,8 @@ export class SensorLComponent implements OnInit {
   desc: string;
   radioConec: boolean;
   radioAct: boolean;
-  cont = 1;
   apiRoot: string = 'http://localhost:8080/api/sistema/insertaSensorL';
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private senServ: SensorLService) { }
 
   ngOnInit() {
   }
@@ -27,7 +27,7 @@ export class SensorLComponent implements OnInit {
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
     return this.http.post(this.apiRoot,{
-      'id': this.cont++,
+      'id': this.senServ.cont++,
       'nombre': this.name,
       'ubicacionE': this.building,
       'ubicacionC': this.room,

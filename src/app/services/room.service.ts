@@ -8,9 +8,11 @@ import { RoomModel } from '../models/room-model';
 export class RoomService {
   apiRoot = 'http://localhost:8080/api/sistema/cuartos';
   rooms: RoomModel[];
+  cont:number;
 
   constructor(private http: Http) {
     this.rooms = [];
+    this.cont=1;
   }
 
   getRooms(): Promise<RoomModel[]> {

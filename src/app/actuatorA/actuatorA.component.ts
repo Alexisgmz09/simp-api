@@ -3,7 +3,7 @@ import { ActuatorAModel } from '../models/actuatorA-model';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Router } from "@angular/router";
-
+import { ActuatorAService } from '../services/actuatorA.service';
 
 @Component({
   selector: 'app-actuatorA',
@@ -20,10 +20,7 @@ export class ActuatorAComponent implements OnInit {
   desc: string;
   radioConec: boolean;
   radioAct: boolean;
-  cont = 1;
-  actuador: ActuatorAModel = new ActuatorAModel(this.cont++, '', 0, '', '', '', 0, '',
-    '', false, false, 0);
-  constructor(private http: Http,private router: Router) { }
+  constructor(private http: Http,private router: Router, private actServ:ActuatorAService) { }
 
   ngOnInit() {
   }
@@ -33,7 +30,7 @@ export class ActuatorAComponent implements OnInit {
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
     return this.http.post(this.apiRoot,{
-      'id': this.cont++,
+      'id': this.actServ.cont++,
       'nombre': this.name,
       'velocidad': this.speed,
       'unidad': this.unit,

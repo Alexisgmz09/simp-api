@@ -8,9 +8,11 @@ import { SensorLModel } from '../models/sensorL-model';
 export class SensorLService {
   apiRoot = 'http://localhost:8080/api/sistema/sensorLs';
   sensorsL: SensorLModel[];
+  cont:number;
 
   constructor(private http: Http) {
     this.sensorsL = [];
+    this.cont=1;
   }
 
   getSensorsL(): Promise<SensorLModel[]> {

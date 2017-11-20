@@ -3,6 +3,7 @@ import {ActuatorCModel} from "../models/actuatorC-model";
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Router } from "@angular/router";
+import { ActuatorCService } from '../services/actuatorC.service';
 
 @Component({
   selector: 'app-actuatorC',
@@ -19,10 +20,7 @@ export class ActuatorCComponent implements OnInit {
   desc: string;
   radioConec: boolean;
   radioAct: boolean;
-  cont = 1;
-  actuador: ActuatorCModel = new ActuatorCModel(this.cont++, '', '', '', '', 0, '',
-    '', false, false, 0);
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private actServ:ActuatorCService) { }
 
   ngOnInit() {
   }
@@ -32,7 +30,7 @@ export class ActuatorCComponent implements OnInit {
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
     return this.http.post(this.apiRoot,{
-      'id': this.cont++,
+      'id': this.actServ.cont++,
       'nombre': this.name,
       'unidad': this.unit,
       'ubicacionE': this.building,

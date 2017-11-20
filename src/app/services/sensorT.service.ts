@@ -8,9 +8,11 @@ import { SensorTModel } from '../models/sensorT-model';
 export class SensorTService {
   apiRoot = 'http://localhost:8080/api/sistema/sensorTs';
   sensorsT: SensorTModel[];
+  cont:number;
 
   constructor(private http: Http) {
     this.sensorsT = [];
+    this.cont=1;
   }
 
   getSensorsT(): Promise<SensorTModel[]> {

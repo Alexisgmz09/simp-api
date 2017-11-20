@@ -8,9 +8,11 @@ import { ActuatorCModel } from '../models/actuatorC-model';
 export class ActuatorCService {
   apiRoot = 'http://localhost:8080/api/sistema/actuadorCs';
   actuatorsC: ActuatorCModel[];
+  cont:number;
 
   constructor(private http: Http) {
     this.actuatorsC = [];
+    this.cont=1;
   }
 
   getActuatorsC(): Promise<ActuatorCModel[]> {
