@@ -3,26 +3,26 @@ import { Component, OnInit } from '@angular/core';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 
-import { ActuatorAService } from "../services/actuatorA.service";
-import { ActuatorAModel } from "../models/actuatorA-model";
+import { ActuatorAService } from '../services/actuatorA.service';
+import { ActuatorAModel } from '../models/actuatorA-model';
 
-import { ActuatorCService } from "../services/actuatorC.service";
-import { ActuatorCModel } from "../models/actuatorC-model";
+import { ActuatorCService } from '../services/actuatorC.service';
+import { ActuatorCModel } from '../models/actuatorC-model';
 
-import { ActuatorFService } from "../services/actuatorF.service";
-import { ActuatorFModel } from "../models/actuatorF-model";
+import { ActuatorFService } from '../services/actuatorF.service';
+import { ActuatorFModel } from '../models/actuatorF-model';
 
-import { SensorCService } from "../services/sensorC.service";
-import { SensorCModel } from "../models/sensorC-model";
+import { SensorCService } from '../services/sensorC.service';
+import { SensorCModel } from '../models/sensorC-model';
 
-import { SensorMService } from "../services/sensorM.service";
-import { SensorMModel } from "../models/sensorM-model";
+import { SensorMService } from '../services/sensorM.service';
+import { SensorMModel } from '../models/sensorM-model';
 
-import { SensorLService } from "../services/sensorL.service";
-import { SensorLModel } from "../models/sensorL-model";
+import { SensorLService } from '../services/sensorL.service';
+import { SensorLModel } from '../models/sensorL-model';
 
-import { SensorTService } from "../services/sensorT.service";
-import { SensorTModel } from "../models/sensorT-model";
+import { SensorTService } from '../services/sensorT.service';
+import { SensorTModel } from '../models/sensorT-model';
 
 @Component({
   selector: 'app-state',
@@ -39,7 +39,8 @@ export class StateComponent implements OnInit {
   sensorsT: SensorTModel[] = [];
   constructor(private actuatorAService: ActuatorAService, private actuatorCService: ActuatorCService,
               private actuatorFService: ActuatorFService, private sensorCService: SensorCService,
-              private sensorMService: SensorMService, private sensorLService: SensorLService, private sensorTService: SensorTService, private http: Http) { }
+              private sensorMService: SensorMService, private sensorLService: SensorLService,
+              private sensorTService: SensorTService, private http: Http) { }
 
   ngOnInit() {
     this.actuatorAService.getActuatorsA().then(actuatorsA => this.actuatorsA = actuatorsA);
@@ -50,81 +51,95 @@ export class StateComponent implements OnInit {
     this.sensorLService.getSensorsL().then(sensorsL => this.sensorsL = sensorsL);
     this.sensorTService.getSensorsT().then(sensorsT => this.sensorsT = sensorsT);
   }
-  deleteActuatorA( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
+  deleteActuatorA( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarActuadorA',{
+    this.http.post('http://localhost:8080/api/sistema/borrarActuadorA',{
       'id': id,
       'estado': false
     }, options).toPromise()
-      .then(this.extractData)
+      .then(res => {
+        console.log(res);
+      })
       .catch(this.handleErrorPromise);
   }
-  deleteActuatorC( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
+  deleteActuatorC( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarActuadorC',{
+    this.http.post('http://localhost:8080/api/sistema/borrarActuadorC',{
       'id': id,
       'estado': false
     }, options).toPromise()
-      .then(this.extractData)
+      .then(res => {
+        console.log(res);
+      })
       .catch(this.handleErrorPromise);
   }
-  deleteActuatorF( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
+  deleteActuatorF( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarActuadorF',{
+    this.http.post('http://localhost:8080/api/sistema/borrarActuadorF',{
+    'id': id,
+      'estado': false
+  }, options).toPromise()
+.then(res => {
+  console.log(res);
+})
+.catch(this.handleErrorPromise);
+}
+  deleteSensorC( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
+      'Access-Control-Allow-Credentials': true});
+    let options = new RequestOptions({ headers: headers });
+    this.http.post('http://localhost:8080/api/sistema/borrarSensorC',{
       'id': id,
       'estado': false
     }, options).toPromise()
-      .then(this.extractData)
+      .then(res => {
+        console.log(res);
+      })
       .catch(this.handleErrorPromise);
   }
-  deleteSensorC( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
+  deleteSensorL( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarSensorC',{
+    this.http.post('http://localhost:8080/api/sistema/borrarSensorL',{
       'id': id,
       'estado': false
     }, options).toPromise()
-      .then(this.extractData)
+      .then(res => {
+        console.log(res);
+      })
       .catch(this.handleErrorPromise);
   }
-  deleteSensorL( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
+  deleteSensorM( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarSensorL',{
+    this.http.post('http://localhost:8080/api/sistema/borrarSensorM',{
       'id': id,
       'estado': false
     }, options).toPromise()
-      .then(this.extractData)
+      .then(res => {
+        console.log(res);
+      })
       .catch(this.handleErrorPromise);
   }
-  deleteSensorM( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
+  deleteSensorT( id: number): void{
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarSensorM',{
+    this.http.post('http://localhost:8080/api/sistema/borrarSensorT',{
       'id': id,
       'estado': false
     }, options).toPromise()
-      .then(this.extractData)
-      .catch(this.handleErrorPromise);
-  }
-  deleteSensorT( id: number): Promise<Response>{
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
-      'Access-Control-Allow-Credentials': true});
-    let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:8080/api/sistema/borrarSensorT',{
-      'id': id,
-      'estado': false
-    }, options).toPromise()
-      .then(this.extractData)
+      .then(res => {
+        console.log(res);
+      })
       .catch(this.handleErrorPromise);
   }
   private extractData(res: Response) {
