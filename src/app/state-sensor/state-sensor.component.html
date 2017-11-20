@@ -122,7 +122,7 @@
                 <td>{{ actuatorA.nombre }}</td>
                 <td>{{ actuatorA.descripcion }}</td>
                 <td>{{ actuatorA.ubicacionC }} {{ actuatorA.ubicacionE}}</td>
-                <td> <span on-click="deleteSensorL(sensorL.id,true)" class="icon icon-switch"></span></td>
+                <td> <span on-click="deleteSensorL(actuatorA.id,true)" class="icon icon-switch"></span></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let actuatorC of actuatorsC">
@@ -131,7 +131,7 @@
                 <td>{{ actuatorC.nombre }}</td>
                 <td>{{ actuatorC.descripcion }}</td>
                 <td>{{ actuatorC.ubicacionC }} {{ actuatorC.ubicacionE}}</td>
-                <td> <span on-click="deleteActuatorC(actuator.id,true)" class="icon icon-switch"></span></td>
+                <td> <span on-click="deleteActuatorC(actuatorC.id,true)" class="icon icon-switch"></span></td>
               </tr>
             </ng-container>
             <ng-container *ngFor="let actuatorF of actuatorsF">
