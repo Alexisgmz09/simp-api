@@ -38,14 +38,14 @@ export class HistoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.actuatorAService.getActuatorsA().then(actuatorsA => this.actuatorsA = this.actuatorsA);
-    this.actuatorCService.getActuatorsC().then(actuatorsC => this.actuatorsC = this.actuatorsC);
-    this.actuatorFService.getActuatorsF().then(actuatorsF => this.actuatorsF = this.actuatorsF);
+    this.actuatorAService.getActuatorsA().then(actuatorsA => this.actuatorsA = actuatorsA);
+    this.actuatorCService.getActuatorsC().then(actuatorsC => this.actuatorsC = actuatorsC);
+    this.actuatorFService.getActuatorsF().then(actuatorsF => this.actuatorsF = actuatorsF);
 
-    this.sensorCService.getSensorsC().then(sensorsC => this.sensorsC = this.sensorsC);
-    this.sensorMService.getSensorsM().then(sensorsM => this.sensorsM = this.sensorsM);
-    this.sensorLService.getSensorsL().then(sensorsL => this.sensorsL = this.sensorsL);
-    this.sensorTService.getSensorsT().then(sensorsT => this.sensorsT = this.sensorsT);
+    this.sensorCService.getSensorsC().then(sensorsC => this.sensorsC = sensorsC);
+    this.sensorMService.getSensorsM().then(sensorsM => this.sensorsM = sensorsM);
+    this.sensorLService.getSensorsL().then(sensorsL => this.sensorsL = sensorsL);
+    this.sensorTService.getSensorsT().then(sensorsT => this.sensorsT = sensorsT);
   }
 
 }
