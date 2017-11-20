@@ -30,6 +30,7 @@ import { SensorCService } from './services/sensorC.service';
 import { SensorMService } from './services/sensorM.service';
 import { SensorLService } from './services/sensorL.service';
 import { SensorTService } from './services/sensorT.service';
+import { UserService } from './services/user.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -67,7 +68,8 @@ import { AppRoutingModule } from './app-routing.module';
     SensorCService,
     SensorMService,
     SensorLService,
-    SensorTService
+    SensorTService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
