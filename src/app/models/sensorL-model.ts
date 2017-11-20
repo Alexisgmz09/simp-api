@@ -7,7 +7,8 @@ export class SensorLModel {
     public tipoSensor: string,
     public estado: boolean,
     public conectado: boolean,
-    public cantidadLuz: number,
+    public luzAmbiente: number,
+    public luzArtificial: number,
     public nombre: string
   ) { }
 }

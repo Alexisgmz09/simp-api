@@ -21,6 +21,7 @@ export class RoomComponent implements OnInit {
   maxtem: number;
   minvel: number;
   maxvel: number;
+  threshold: number;
   constructor(private http: Http, private router: Router, private roomServ: RoomService) {}
 
   ngOnInit() {
@@ -30,9 +31,19 @@ export class RoomComponent implements OnInit {
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
-    return this.http.post(this.apiRoot, {'id': this.roomServ.cont++, 'nombre': this.name, 'ubicacionE': this.building, 'ubicacionC': this.loc,
-      'minconsumoEnergia': this.minene, 'maxconsumoEnergia': this.maxene, 'mintemperatura': this.mintem, 'maxtemperatura': this.maxtem,
-      'minVelocidad': this.minvel, 'maxVelocidad': this.maxvel }, options).toPromise()
+    return this.http.post(this.apiRoot,
+      {'id': this.roomServ.cont++,
+        'nombre': this.name,
+        'ubicacionE': this.building,
+        'ubicacionC': this.loc,
+        'minconsumoEnergia': this.minene,
+        'maxconsumoEnergia': this.maxene,
+        'mintemperatura': this.mintem,
+        'maxtemperatura': this.maxtem,
+        'minVelocidad': this.minvel,
+        'maxVelocidad': this.maxvel,
+      'threshold': this.threshold},
+      options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);
   }

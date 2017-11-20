@@ -31,7 +31,8 @@ export class SensorLService {
                 item.tipoSensor,
                 item.estado,
                 item.conectado,
-                item.cantidadLuz,
+                item.luzAmbiente,
+                item.luzArtificial,
                 item.nombre
               );
             });

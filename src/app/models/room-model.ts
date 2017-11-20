@@ -9,6 +9,7 @@ export class RoomModel {
     public maxconsumoEnergia: number,
     public minconsumoEnergia: number,
     public maxtemperatura: number,
-    public mintemperatura: number
+    public mintemperatura: number,
+    public threshold: number
   ) { }
 }

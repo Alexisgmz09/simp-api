@@ -35,7 +35,8 @@ export class SensorLComponent implements OnInit {
       'tipoSensor': 'SensorL',
       'estado': this.radioAct,
       'conectado': this.radioConec,
-      'cantidadLuz': 0
+      'luzAmbiente': 0,
+      'luzArtificial':0
     }, options).toPromise()
       .then(this.extractData)
       .catch(this.handleErrorPromise);

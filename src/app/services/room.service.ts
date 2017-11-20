@@ -33,7 +33,8 @@ export class RoomService {
                 item.maxconsumoEnergia,
                 item.minconsumoEnergia,
                 item.maxtemperatura,
-                item.mintemperatura
+                item.mintemperatura,
+                item.threshold
               );
             });
             resolve(this.rooms);
