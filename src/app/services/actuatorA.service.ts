@@ -12,7 +12,7 @@ export class ActuatorAService {
 
   constructor(private http: Http) {
     this.actuatorsA = [];
-    this.cont=1;
+    this.cont = 1;
   }
 
   getActuatorsA(): Promise<ActuatorAModel[]> {

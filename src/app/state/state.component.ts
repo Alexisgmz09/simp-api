@@ -26,6 +26,7 @@ import { SensorTModel } from '../models/sensorT-model';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
+
 @Component({
   selector: 'app-state',
   templateUrl: './state.component.html',
@@ -69,6 +70,7 @@ export class StateComponent implements OnInit {
         console.log(res);
       })
       .catch(this.handleErrorPromise);
+    window.location.reload();
   }
   deleteActuatorC( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
@@ -82,6 +84,7 @@ export class StateComponent implements OnInit {
         console.log(res);
       })
       .catch(this.handleErrorPromise);
+    window.location.reload();
   }
   deleteActuatorF( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
@@ -95,6 +98,7 @@ export class StateComponent implements OnInit {
   console.log(res);
 })
 .catch(this.handleErrorPromise);
+    window.location.reload();
 }
   deleteSensorC( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
@@ -108,6 +112,7 @@ export class StateComponent implements OnInit {
         console.log(res);
       })
       .catch(this.handleErrorPromise);
+    window.location.reload();
   }
   deleteSensorL( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
@@ -121,6 +126,7 @@ export class StateComponent implements OnInit {
         console.log(res);
       })
       .catch(this.handleErrorPromise);
+    window.location.reload();
   }
   deleteSensorM( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
@@ -134,6 +140,7 @@ export class StateComponent implements OnInit {
         console.log(res);
       })
       .catch(this.handleErrorPromise);
+    window.location.reload();
   }
   deleteSensorT( id: number): void{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200/',
@@ -147,6 +154,7 @@ export class StateComponent implements OnInit {
         console.log(res);
       })
       .catch(this.handleErrorPromise);
+    window.location.reload();
   }
   private extractData(res: Response) {
     let body = res.json();

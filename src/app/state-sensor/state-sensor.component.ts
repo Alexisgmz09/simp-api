@@ -26,6 +26,7 @@ import { SensorTModel } from "../models/sensorT-model";
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
+
 @Component({
   selector: 'app-state-sensor',
   templateUrl: './state-sensor.component.html',
@@ -62,6 +63,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarActuadorA',{
       'id': id,
       'estado': state
@@ -73,6 +75,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarActuadorC',{
       'id': id,
       'estado': state
@@ -84,6 +87,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarActuadorF',{
       'id': id,
       'estado': state
@@ -95,6 +99,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorC',{
       'id': id,
       'estado': state
@@ -106,6 +111,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorL',{
       'id': id,
       'estado': state
@@ -117,6 +123,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorM',{
       'id': id,
       'estado': state
@@ -128,6 +135,7 @@ export class StateSensorComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
+    window.location.reload();
     return this.http.post('http://localhost:8080/api/sistema/apagarSensorT',{
       'id': id,
       'estado': state
