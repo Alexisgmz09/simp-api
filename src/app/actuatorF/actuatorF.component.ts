@@ -3,6 +3,7 @@ import { ActuatorFModel } from '../models/actuatorF-model';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Router } from "@angular/router";
+import { ActuatorFService } from '../services/actuatorF.service';
 
 @Component({
   selector: 'app-actuatorF',
@@ -18,7 +19,7 @@ export class ActuatorFComponent implements OnInit {
   radioAct: boolean;
   cont = 1;
   apiRoot: string = 'http://localhost:8080/api/sistema/insertaActuadorF';
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private actServ:ActuatorFService) { }
 
   ngOnInit() {
   }
@@ -28,7 +29,7 @@ export class ActuatorFComponent implements OnInit {
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
     return this.http.post(this.apiRoot,{
-      'id': this.cont++,
+      'id': this.actServ.cont++,
       'nombre': this.name,
       'unidad': 'lum',
       'ubicacionE': this.building,

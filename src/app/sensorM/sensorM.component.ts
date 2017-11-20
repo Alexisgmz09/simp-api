@@ -3,6 +3,7 @@ import { SensorMModel } from '../models/sensorM-model';
 import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Router } from "@angular/router";
+import { SensorMService } from '../services/sensorM.service';
 
 @Component({
   selector: 'app-sensorM',
@@ -17,9 +18,7 @@ export class SensorMComponent implements OnInit {
   desc: string;
   radioConec: boolean;
   radioAct: boolean;
-  cont = 1;
-  sensor: SensorMModel = new SensorMModel(this.cont++, '', '', '', 'SensorM', false, false, false, '');
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router,private senServ:SensorMService) { }
 
   ngOnInit() {
   }
@@ -29,7 +28,7 @@ export class SensorMComponent implements OnInit {
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
     return this.http.post(this.apiRoot,{
-      'id': this.cont++,
+      'id': this.senServ.cont++,
       'ubicacionE': this.building,
       'ubicacionC': this.room,
       'descripcion': this.desc,
