@@ -3,6 +3,7 @@ import { HttpModule, Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { SensorCModel } from '../models/sensorC-model';
 import { Router } from "@angular/router";
+import { SensorCService } from '../services/sensorC.service'
 
 @Component({
   selector: 'app-sensorC',
@@ -17,9 +18,7 @@ export class SensorCComponent implements OnInit {
   desc: string;
   radioConec: boolean;
   radioAct: boolean;
-  cont = 1;
-  sensor: SensorCModel = new SensorCModel(this.cont++, '', '', '', 'SensorC', false, false, false, 0, '');
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private senService: SensorCService) { }
 
   ngOnInit() {
   }
@@ -28,7 +27,7 @@ export class SensorCComponent implements OnInit {
       'Access-Control-Allow-Credentials': true});
     let options = new RequestOptions({ headers: headers });
     this.router.navigateByUrl('/home');
-    return this.http.post(this.apiRoot,{'id': this.cont++,
+    return this.http.post(this.apiRoot,{'id': this.senService.cont++,
       'ubicacionE': this.building,
       'ubicacionC': this.room,
       'descripcion': this.desc,
