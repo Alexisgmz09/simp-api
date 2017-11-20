@@ -18,6 +18,12 @@ import { SensorCModel } from "../models/sensorC-model";
 import { SensorMService } from "../services/sensorM.service";
 import { SensorMModel } from "../models/sensorM-model";
 
+import { SensorLService } from "../services/sensorL.service";
+import { SensorLModel } from "../models/sensorL-model";
+
+import { SensorTService } from "../services/sensorT.service";
+import { SensorTModel } from "../models/sensorT-model";
+
 @Component({
   selector: 'app-state',
   templateUrl: './state.component.html',
@@ -29,9 +35,11 @@ export class StateComponent implements OnInit {
   actuatorsF: ActuatorFModel[] = [];
   sensorsC: SensorCModel[] = [];
   sensorsM: SensorMModel[] = [];
+  sensorsL: SensorLModel[] = [];
+  sensorsT: SensorTModel[] = [];
   constructor(private actuatorAService: ActuatorAService, private actuatorCService: ActuatorCService,
               private actuatorFService: ActuatorFService, private sensorCService: SensorCService,
-              private sensorMService: SensorMService, private http: Http) { }
+              private sensorMService: SensorMService, private sensorLService: SensorLService, private sensorTService: SensorTService, private http: Http) { }
 
   ngOnInit() {
     this.actuatorAService.getActuatorsA().then(actuatorsA => this.actuatorsA = actuatorsA);
@@ -39,6 +47,8 @@ export class StateComponent implements OnInit {
     this.actuatorFService.getActuatorsF().then(actuatorsF => this.actuatorsF = actuatorsF);
     this.sensorCService.getSensorsC().then(sensorsC => this.sensorsC = sensorsC);
     this.sensorMService.getSensorsM().then(sensorsM => this.sensorsM = sensorsM);
+    this.sensorLService.getSensorsL().then(sensorsL => this.sensorsL = sensorsL);
+    this.sensorTService.getSensorsT().then(sensorsT => this.sensorsT = sensorsT);
   }
   deleteActuatorA( id: number): Promise<Response>{
     let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Controll-Allow-Origin': 'http://localhost:4200',

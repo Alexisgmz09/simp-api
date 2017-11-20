@@ -24,9 +24,9 @@ export class SensorCService {
           res => {
             this.sensorsC = res.json().map((item: any) => {
               return new SensorCModel(
+                item.id,
                 item.ubicacionE,
                 item.ubicacionC,
-                item.id,
                 item.descripcion,
                 item.tipoSensor,
                 item.estado,

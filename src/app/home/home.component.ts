@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
     this.actuatorCService.getActuatorsC().then(actuatorsC => this.actuatorsC = this.actuatorsC.slice(0, 2));
     this.actuatorFService.getActuatorsF().then(actuatorsF => this.actuatorsF = this.actuatorsF.slice(0, 2));
 
-    this.sensorCService.getSensorsC().then(sensorsC => this.sensorsC = this.sensorsC.slice(0, 4));
+    this.sensorCService.getSensorsC().then(sensorsC => this.sensorsC = sensorsC.slice(0, 4));
     this.sensorMService.getSensorsM().then(sensorsM => this.sensorsM = this.sensorsM.slice(0, 4));
   }
 
